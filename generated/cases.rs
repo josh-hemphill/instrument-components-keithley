@@ -821,23 +821,23 @@ ScriptStep::Close(Ok(())),
 ],
 expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
 CatalogCase { id: "keithley.3706a|B|SwitchCloseRoute-0", calls: vec![
-CatalogRequest::SwitchCloseRoute { ch1: 1, ch2: 1 },
+CatalogRequest::SwitchCloseRoute { ch1: 1, ch2: 3 },
 ], script: vec![
-ScriptStep::Write(":ROUTe:CLOS (@(1,1))".into()),
+ScriptStep::Write(":ROUTe:CLOS (@(1,3))".into()),
 ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Unit), expected_error: None },
 CatalogCase { id: "keithley.3706a|B|SwitchOpenRoute-0", calls: vec![
-CatalogRequest::SwitchOpenRoute { ch1: 1, ch2: 1 },
+CatalogRequest::SwitchOpenRoute { ch1: 1, ch2: 3 },
 ], script: vec![
-ScriptStep::Write(":ROUTe:OPEN (@(1,1))".into()),
+ScriptStep::Write(":ROUTe:OPEN (@(1,3))".into()),
 ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Unit), expected_error: None },
 CatalogCase { id: "keithley.3706a|B|SwitchIsClosed-0", calls: vec![
-CatalogRequest::SwitchIsClosed { ch1: 1, ch2: 1 },
+CatalogRequest::SwitchIsClosed { ch1: 1, ch2: 3 },
 ], script: vec![
-ScriptStep::Query(":ROUTe:CLOS? (@(1,1))".into(), Ok("1".into())),
+ScriptStep::Query(":ROUTe:CLOS? (@(1,3))".into(), Ok("1".into())),
 ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Boolean(true)), expected_error: None },
@@ -870,23 +870,23 @@ ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Unit), expected_error: None },
 CatalogCase { id: "keithley.707b|B|SwitchCloseRoute-0", calls: vec![
-CatalogRequest::SwitchCloseRoute { ch1: 1, ch2: 1 },
+CatalogRequest::SwitchCloseRoute { ch1: 1, ch2: 3 },
 ], script: vec![
-ScriptStep::Write(":ROUTe:CLOS (@(1,1))".into()),
+ScriptStep::Write(":ROUTe:CLOS (@(1,3))".into()),
 ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Unit), expected_error: None },
 CatalogCase { id: "keithley.707b|B|SwitchOpenRoute-0", calls: vec![
-CatalogRequest::SwitchOpenRoute { ch1: 1, ch2: 1 },
+CatalogRequest::SwitchOpenRoute { ch1: 1, ch2: 3 },
 ], script: vec![
-ScriptStep::Write(":ROUTe:OPEN (@(1,1))".into()),
+ScriptStep::Write(":ROUTe:OPEN (@(1,3))".into()),
 ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Unit), expected_error: None },
 CatalogCase { id: "keithley.707b|B|SwitchIsClosed-0", calls: vec![
-CatalogRequest::SwitchIsClosed { ch1: 1, ch2: 1 },
+CatalogRequest::SwitchIsClosed { ch1: 1, ch2: 3 },
 ], script: vec![
-ScriptStep::Query(":ROUTe:CLOS? (@(1,1))".into(), Ok("1".into())),
+ScriptStep::Query(":ROUTe:CLOS? (@(1,3))".into(), Ok("1".into())),
 ScriptStep::Close(Ok(())),
 ],
 expected: Some(CatalogReply::Boolean(true)), expected_error: None },
@@ -1405,5 +1405,716 @@ CatalogRequest::DcPowerSupplySetVoltage { channel: 2, volts: 1.0 },
 ScriptStep::Close(Ok(())),
 ],
 expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureVoltageDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureVoltageAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:AC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureCurrentDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:DC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureCurrentAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:AC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureResistance-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureResistance2Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureResistance4Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:FRES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmMeasureTemperature-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureTemperature { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:TEMP?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmConfigureVoltageDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureVoltageDc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:VOLT:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmConfigureVoltageAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureVoltageAc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:VOLT:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmConfigureCurrentDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureCurrentDc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:CURR:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmConfigureCurrentAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureCurrentAc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:CURR:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmConfigureResistance-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureResistance { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:RES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmConfigureResistance4Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureResistance4Wire { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:FRES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmInitiate-0-transport-failure", calls: vec![
+CatalogRequest::DmmInitiate,
+], script: vec![
+ScriptStep::WriteFailure("INIT".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmFetch-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+CatalogRequest::DmmFetch,
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
+ScriptStep::Query("FETC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmRead-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+CatalogRequest::DmmRead,
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
+ScriptStep::Query("READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|DmmSoftwareTrigger-0-transport-failure", calls: vec![
+CatalogRequest::DmmSoftwareTrigger,
+], script: vec![
+ScriptStep::WriteFailure("*TRG".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2000|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureVoltageDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureVoltageAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:AC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureCurrentDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:DC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureCurrentAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR:AC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureResistance-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureResistance2Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:RES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureResistance4Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:FRES?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmMeasureTemperature-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureTemperature { range: None },
+], script: vec![
+ScriptStep::Query(":MEAS:TEMP?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmConfigureVoltageDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureVoltageDc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:VOLT:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmConfigureVoltageAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureVoltageAc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:VOLT:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmConfigureCurrentDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureCurrentDc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:CURR:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmConfigureCurrentAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureCurrentAc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:CURR:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmConfigureResistance-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureResistance { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:RES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmConfigureResistance4Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureResistance4Wire { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:FRES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmInitiate-0-transport-failure", calls: vec![
+CatalogRequest::DmmInitiate,
+], script: vec![
+ScriptStep::WriteFailure("INIT".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmFetch-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+CatalogRequest::DmmFetch,
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
+ScriptStep::Query("FETC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmRead-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+CatalogRequest::DmmRead,
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT:DC?".into(), Ok("3.3".into())),
+ScriptStep::Query("READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DmmSoftwareTrigger-0-transport-failure", calls: vec![
+CatalogRequest::DmmSoftwareTrigger,
+], script: vec![
+ScriptStep::WriteFailure("*TRG".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplySetVoltage-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetVoltage { channel: 1, volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetCurrentLimit { channel: 1, amps: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:CURR 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplyOutputEnable-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOutputEnable { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1 ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOutputStateQuery { channel: 1 },
+], script: vec![
+ScriptStep::Query(":OUTP1?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplyOvpLevel-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpLevel { channel: 1, volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT:PROT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplyOvpEnable-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpEnable { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT:PROT:STAT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplyOvpQuery-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpQuery { channel: 1 },
+], script: vec![
+ScriptStep::Query(":SOUR1:VOLT:PROT:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplyReadVoltage-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyReadVoltage { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT? 1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplyReadCurrent-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyReadCurrent { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR? 1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|DcPowerSupplySetSenseMode-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetSenseMode { channel: 1, mode: SenseMode::Internal },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1:SENS OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.2602b|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1 OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Write(":OUTP3 OFF".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "keithley.3706a|B|SwitchCloseRoute-0-transport-failure", calls: vec![
+CatalogRequest::SwitchCloseRoute { ch1: 1, ch2: 3 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:CLOS (@(1,3))".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.3706a|B|SwitchOpenRoute-0-transport-failure", calls: vec![
+CatalogRequest::SwitchOpenRoute { ch1: 1, ch2: 3 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:OPEN (@(1,3))".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.3706a|B|SwitchIsClosed-0-transport-failure", calls: vec![
+CatalogRequest::SwitchIsClosed { ch1: 1, ch2: 3 },
+], script: vec![
+ScriptStep::Query(":ROUTe:CLOS? (@(1,3))".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.3706a|B|SwitchOpenAll-0-transport-failure", calls: vec![
+CatalogRequest::SwitchOpenAll,
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:OPEN:ALL".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.3706a|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.3706a|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.3706a|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:OPEN:ALL".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "keithley.707b|B|SwitchCloseRoute-0-transport-failure", calls: vec![
+CatalogRequest::SwitchCloseRoute { ch1: 1, ch2: 3 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:CLOS (@(1,3))".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.707b|B|SwitchOpenRoute-0-transport-failure", calls: vec![
+CatalogRequest::SwitchOpenRoute { ch1: 1, ch2: 3 },
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:OPEN (@(1,3))".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.707b|B|SwitchIsClosed-0-transport-failure", calls: vec![
+CatalogRequest::SwitchIsClosed { ch1: 1, ch2: 3 },
+], script: vec![
+ScriptStep::Query(":ROUTe:CLOS? (@(1,3))".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.707b|B|SwitchOpenAll-0-transport-failure", calls: vec![
+CatalogRequest::SwitchOpenAll,
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:OPEN:ALL".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.707b|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.707b|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.707b|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":ROUTe:OPEN:ALL".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureVoltageDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"VOLT:DC\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureVoltageAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageAc { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"VOLT:AC\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureCurrentDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureCurrentDc { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"CURR:DC\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureCurrentAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureCurrentAc { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"CURR:AC\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureResistance-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"RES\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureResistance2Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance2Wire { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"RES\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureResistance4Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureResistance4Wire { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"FRES\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmMeasureTemperature-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureTemperature { range: None },
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"TEMP\";:READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmConfigureVoltageDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureVoltageDc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:VOLT:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmConfigureVoltageAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureVoltageAc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:VOLT:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmConfigureCurrentDc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureCurrentDc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:CURR:DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmConfigureCurrentAc-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureCurrentAc { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:CURR:AC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmConfigureResistance-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureResistance { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:RES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmConfigureResistance4Wire-0-transport-failure", calls: vec![
+CatalogRequest::DmmConfigureResistance4Wire { range: None, resolution: None },
+], script: vec![
+ScriptStep::WriteFailure(":CONF:FRES".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmInitiate-0-transport-failure", calls: vec![
+CatalogRequest::DmmInitiate,
+], script: vec![
+ScriptStep::WriteFailure("INIT".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmFetch-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+CatalogRequest::DmmFetch,
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"VOLT:DC\";:READ?".into(), Ok("3.3".into())),
+ScriptStep::Query("FETC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmRead-0-transport-failure", calls: vec![
+CatalogRequest::DmmMeasureVoltageDc { range: None },
+CatalogRequest::DmmRead,
+], script: vec![
+ScriptStep::Query(":SENS:FUNC \"VOLT:DC\";:READ?".into(), Ok("3.3".into())),
+ScriptStep::Query("READ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|DmmSoftwareTrigger-0-transport-failure", calls: vec![
+CatalogRequest::DmmSoftwareTrigger,
+], script: vec![
+ScriptStep::WriteFailure("*TRG".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.dmm6500|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetVoltage { channel: 1, volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetCurrentLimit { channel: 1, amps: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:CURR 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplyOutputEnable-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOutputEnable { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1 ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplyOutputStateQuery-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOutputStateQuery { channel: 1 },
+], script: vec![
+ScriptStep::Query(":OUTP1?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpLevel { channel: 1, volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT:PROT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplyOvpEnable-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpEnable { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT:PROT:STAT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplyOvpQuery-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpQuery { channel: 1 },
+], script: vec![
+ScriptStep::Query(":SOUR1:VOLT:PROT:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplyReadVoltage-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyReadVoltage { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT? 1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyReadCurrent { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR? 1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|DcPowerSupplySetSenseMode-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetSenseMode { channel: 1, mode: SenseMode::Internal },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1:SENS OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "keithley.e36312a|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1 OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Write(":OUTP3 OFF".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "keithley.2602b|B|cross-class-temperature-state", calls: vec![
+CatalogRequest::DmmMeasureTemperature { range: None },
+CatalogRequest::DcPowerSupplyReadVoltage { channel: 1 },
+CatalogRequest::DmmFetch,
+], script: vec![
+ScriptStep::Query(":MEAS:TEMP?".into(), Ok("21".into())),
+ScriptStep::Query(":MEAS:VOLT? 1".into(), Ok("3.3".into())),
+ScriptStep::Query("FETC?".into(), Ok("22".into())),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Quantity(Quantity { value: 22.0, unit: Unit::Unknown, status: MeasurementStatus::Valid })), expected_error: None },
 ] }
 }

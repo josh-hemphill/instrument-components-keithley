@@ -1,0 +1,4068 @@
+[
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 14,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn new(session: InstrumentSession) -> Self",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 18,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn from_session(_session: &InstrumentSession) -> Result<Self>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "from_session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 24,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session(&self) -> &InstrumentSession",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 28,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session_mut(&mut self) -> &mut InstrumentSession",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "session_mut",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 41,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_voltage_dc(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_voltage_dc",
+    "targetOperation": "DmmMeasureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 51,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_voltage_ac(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_voltage_ac",
+    "targetOperation": "DmmMeasureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 61,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_current_dc(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_current_dc",
+    "targetOperation": "DmmMeasureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 71,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_current_ac(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_current_ac",
+    "targetOperation": "DmmMeasureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 81,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_resistance(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_resistance",
+    "targetOperation": "DmmMeasureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 86,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_resistance_2wire(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_resistance_2wire",
+    "targetOperation": "DmmMeasureResistance2Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 96,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_resistance_4wire(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_resistance_4wire",
+    "targetOperation": "DmmMeasureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 106,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn measure_temperature(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "measure_temperature",
+    "targetOperation": "DmmMeasureTemperature",
+    "unit": "Celsius",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 116,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn configure_voltage_dc( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "configure_voltage_dc",
+    "targetOperation": "DmmConfigureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 130,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn configure_voltage_ac( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "configure_voltage_ac",
+    "targetOperation": "DmmConfigureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 144,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn configure_current_dc( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "configure_current_dc",
+    "targetOperation": "DmmConfigureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 158,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn configure_current_ac( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "configure_current_ac",
+    "targetOperation": "DmmConfigureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 172,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn configure_resistance( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "configure_resistance",
+    "targetOperation": "DmmConfigureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 186,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn configure_resistance_4wire( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "configure_resistance_4wire",
+    "targetOperation": "DmmConfigureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 200,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "pub fn initiate(&mut self) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "initiate",
+    "targetOperation": "DmmInitiate",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 206,
+    "mode": "sync",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "pub fn fetch(&mut self) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "fetch",
+    "targetOperation": "DmmFetch",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 215,
+    "mode": "sync",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "pub fn read(&mut self) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "read",
+    "targetOperation": "DmmRead",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 224,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "pub fn software_trigger(&mut self) -> Result<()>",
+    "source": "crates/instrument/src/classes/dmm.rs",
+    "sourceSha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0",
+    "symbol": "software_trigger",
+    "targetOperation": "DmmSoftwareTrigger",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 18,
+    "mode": "sync",
+    "parameters": [],
+    "result": "identity",
+    "signature": "public Idn QueryIdn()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "QueryIdn",
+    "targetOperation": "QueryIdentity",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 20,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void Reset()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "Reset",
+    "targetOperation": "Reset",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 25,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void OutputOff()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "OutputOff",
+    "targetOperation": "Shutdown",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 34,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureVoltageDc(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureVoltageDc",
+    "targetOperation": "DmmMeasureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 37,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureVoltageAc(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureVoltageAc",
+    "targetOperation": "DmmMeasureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 40,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureCurrentDc(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureCurrentDc",
+    "targetOperation": "DmmMeasureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 43,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureCurrentAc(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureCurrentAc",
+    "targetOperation": "DmmMeasureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 46,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureResistance(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureResistance",
+    "targetOperation": "DmmMeasureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 49,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureResistance2Wire(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureResistance2Wire",
+    "targetOperation": "DmmMeasureResistance2Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 52,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureResistance4Wire(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureResistance4Wire",
+    "targetOperation": "DmmMeasureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 55,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double MeasureTemperature(double? range = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasureTemperature",
+    "targetOperation": "DmmMeasureTemperature",
+    "unit": "Celsius",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 58,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void ConfigureVoltageDc(double? range = null, double? resolution = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "ConfigureVoltageDc",
+    "targetOperation": "DmmConfigureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 61,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void ConfigureVoltageAc(double? range = null, double? resolution = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "ConfigureVoltageAc",
+    "targetOperation": "DmmConfigureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 64,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void ConfigureCurrentDc(double? range = null, double? resolution = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "ConfigureCurrentDc",
+    "targetOperation": "DmmConfigureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 67,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void ConfigureCurrentAc(double? range = null, double? resolution = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "ConfigureCurrentAc",
+    "targetOperation": "DmmConfigureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 70,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void ConfigureResistance(double? range = null, double? resolution = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "ConfigureResistance",
+    "targetOperation": "DmmConfigureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 73,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void ConfigureResistance4Wire(double? range = null, double? resolution = null)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "ConfigureResistance4Wire",
+    "targetOperation": "DmmConfigureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 76,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void Initiate()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "Initiate",
+    "targetOperation": "DmmInitiate",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 78,
+    "mode": "sync",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "public double Fetch()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "Fetch",
+    "targetOperation": "DmmFetch",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 80,
+    "mode": "sync",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "public double Read()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "Read",
+    "targetOperation": "DmmRead",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 82,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void SoftwareTrigger()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "SoftwareTrigger",
+    "targetOperation": "DmmSoftwareTrigger",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 16,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public InstrumentSession Session =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "Session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "typed-quantity-unit-replaces-session-state-property",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 22,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public string MeasurementUnit =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "MeasurementUnit",
+    "targetOperation": "Quantity.Unit",
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 14,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public Dmm(InstrumentSession session)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Dmm.cs",
+    "sourceSha256": "9d887ef49fd2300d27464f0d02aa70060a2b71c941a4c36ad1170710f1804de9",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 14,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn new(session: AsyncInstrumentSession) -> Self",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 18,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session(&self) -> &AsyncInstrumentSession",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 22,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session_mut(&mut self) -> &mut AsyncInstrumentSession",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "session_mut",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 35,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_voltage_dc(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_voltage_dc",
+    "targetOperation": "DmmMeasureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 45,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_voltage_ac(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_voltage_ac",
+    "targetOperation": "DmmMeasureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 55,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_current_dc(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_current_dc",
+    "targetOperation": "DmmMeasureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 65,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_current_ac(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_current_ac",
+    "targetOperation": "DmmMeasureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 75,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_resistance(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_resistance",
+    "targetOperation": "DmmMeasureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 80,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_resistance_2wire(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_resistance_2wire",
+    "targetOperation": "DmmMeasureResistance2Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 90,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_resistance_4wire(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_resistance_4wire",
+    "targetOperation": "DmmMeasureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 100,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn measure_temperature(&mut self, range: Option<f64>) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "measure_temperature",
+    "targetOperation": "DmmMeasureTemperature",
+    "unit": "Celsius",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 110,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn configure_voltage_dc( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "configure_voltage_dc",
+    "targetOperation": "DmmConfigureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 124,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn configure_voltage_ac( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "configure_voltage_ac",
+    "targetOperation": "DmmConfigureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 138,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn configure_current_dc( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "configure_current_dc",
+    "targetOperation": "DmmConfigureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 152,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn configure_current_ac( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "configure_current_ac",
+    "targetOperation": "DmmConfigureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 166,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn configure_resistance( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "configure_resistance",
+    "targetOperation": "DmmConfigureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 180,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn configure_resistance_4wire( &mut self, range: Option<f64>, resolution: Option<f64>, ) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "configure_resistance_4wire",
+    "targetOperation": "DmmConfigureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 194,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "pub async fn initiate(&mut self) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "initiate",
+    "targetOperation": "DmmInitiate",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 200,
+    "mode": "async",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "pub async fn fetch(&mut self) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "fetch",
+    "targetOperation": "DmmFetch",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 210,
+    "mode": "async",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "pub async fn read(&mut self) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "read",
+    "targetOperation": "DmmRead",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "Rust",
+    "line": 220,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "pub async fn software_trigger(&mut self) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dmm.rs",
+    "sourceSha256": "1a3229a8049f8d8dcd0ae9eaed6a94b4e43e745a9e8c94fce10188378c1d5835",
+    "symbol": "software_trigger",
+    "targetOperation": "DmmSoftwareTrigger",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 17,
+    "mode": "async",
+    "parameters": [],
+    "result": "identity",
+    "signature": "public Task<Idn> QueryIdnAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "QueryIdnAsync",
+    "targetOperation": "QueryIdentity",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 20,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task ResetAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ResetAsync",
+    "targetOperation": "Reset",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 23,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task OutputOffAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "OutputOffAsync",
+    "targetOperation": "Shutdown",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 34,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureVoltageDcAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureVoltageDcAsync",
+    "targetOperation": "DmmMeasureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 37,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureVoltageAcAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureVoltageAcAsync",
+    "targetOperation": "DmmMeasureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 40,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureCurrentDcAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureCurrentDcAsync",
+    "targetOperation": "DmmMeasureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 43,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureCurrentAcAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureCurrentAcAsync",
+    "targetOperation": "DmmMeasureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 46,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureResistanceAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureResistanceAsync",
+    "targetOperation": "DmmMeasureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 49,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureResistance2WireAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureResistance2WireAsync",
+    "targetOperation": "DmmMeasureResistance2Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 52,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureResistance4WireAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureResistance4WireAsync",
+    "targetOperation": "DmmMeasureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 55,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public Task<double> MeasureTemperatureAsync(double? range = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "MeasureTemperatureAsync",
+    "targetOperation": "DmmMeasureTemperature",
+    "unit": "Celsius",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 58,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task ConfigureVoltageDcAsync(double? range = null, double? resolution = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ConfigureVoltageDcAsync",
+    "targetOperation": "DmmConfigureVoltageDc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 61,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task ConfigureVoltageAcAsync(double? range = null, double? resolution = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ConfigureVoltageAcAsync",
+    "targetOperation": "DmmConfigureVoltageAc",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 64,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task ConfigureCurrentDcAsync(double? range = null, double? resolution = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ConfigureCurrentDcAsync",
+    "targetOperation": "DmmConfigureCurrentDc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 67,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task ConfigureCurrentAcAsync(double? range = null, double? resolution = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ConfigureCurrentAcAsync",
+    "targetOperation": "DmmConfigureCurrentAc",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 70,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task ConfigureResistanceAsync(double? range = null, double? resolution = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ConfigureResistanceAsync",
+    "targetOperation": "DmmConfigureResistance",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 73,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "positive",
+        "name": "range",
+        "type": "optional_number"
+      },
+      {
+        "constraint": "positive",
+        "name": "resolution",
+        "type": "optional_number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task ConfigureResistance4WireAsync(double? range = null, double? resolution = null, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ConfigureResistance4WireAsync",
+    "targetOperation": "DmmConfigureResistance4Wire",
+    "unit": "Ohm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 76,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task InitiateAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "InitiateAsync",
+    "targetOperation": "DmmInitiate",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 79,
+    "mode": "async",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "public Task<double> FetchAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "FetchAsync",
+    "targetOperation": "DmmFetch",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 82,
+    "mode": "async",
+    "parameters": [],
+    "result": "quantity",
+    "signature": "public Task<double> ReadAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "ReadAsync",
+    "targetOperation": "DmmRead",
+    "unit": "ConfiguredDmm",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 85,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task SoftwareTriggerAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "SoftwareTriggerAsync",
+    "targetOperation": "DmmSoftwareTrigger",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 15,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public AsyncInstrumentSession Session =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "Session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Dmm",
+    "language": "C#",
+    "line": 13,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public AsyncDmm(AsyncInstrumentSession session)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDmm.cs",
+    "sourceSha256": "450b51e6bc611201369698b0a46900f9435a9a6c45a5730ac1ced3bb6994f2c3",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 14,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn new(session: InstrumentSession) -> Self",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 18,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session(&self) -> &InstrumentSession",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 22,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session_mut(&mut self) -> &mut InstrumentSession",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "session_mut",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 35,
+    "mode": "sync",
+    "parameters": [],
+    "result": "count",
+    "signature": "pub fn channel_count(&self) -> u32",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "channel_count",
+    "targetOperation": "DcPowerSupplyChannelCount",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 40,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn set_voltage(&mut self, channel: u32, volts: f64) -> Result<()>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "set_voltage",
+    "targetOperation": "DcPowerSupplySetVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 53,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "nonnegative",
+        "name": "amps",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn set_current_limit(&mut self, channel: u32, amps: f64) -> Result<()>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "set_current_limit",
+    "targetOperation": "DcPowerSupplySetCurrentLimit",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 66,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn output_enable(&mut self, channel: u32, enabled: bool) -> Result<()>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "output_enable",
+    "targetOperation": "DcPowerSupplyOutputEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 77,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "pub fn output_state_query(&mut self, channel: u32) -> Result<bool>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "output_state_query",
+    "targetOperation": "DcPowerSupplyOutputStateQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 88,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn ovp_level(&mut self, channel: u32, volts: f64) -> Result<()>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "ovp_level",
+    "targetOperation": "DcPowerSupplyOvpLevel",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 101,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn ovp_enable(&mut self, channel: u32, enabled: bool) -> Result<()>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "ovp_enable",
+    "targetOperation": "DcPowerSupplyOvpEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 112,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "pub fn ovp_query(&mut self, channel: u32) -> Result<bool>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "ovp_query",
+    "targetOperation": "DcPowerSupplyOvpQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "explicit-sense-mode-replaces-boolean",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 123,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn sense_enable(&mut self, channel: u32, enabled: bool) -> Result<()>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "sense_enable",
+    "targetOperation": "DcPowerSupplySetSenseMode",
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 139,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn read_voltage(&mut self, channel: u32) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "read_voltage",
+    "targetOperation": "DcPowerSupplyReadVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 150,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub fn read_current(&mut self, channel: u32) -> Result<f64>",
+    "source": "crates/instrument/src/classes/dc_psu.rs",
+    "sourceSha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04",
+    "symbol": "read_current",
+    "targetOperation": "DcPowerSupplyReadCurrent",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 18,
+    "mode": "sync",
+    "parameters": [],
+    "result": "identity",
+    "signature": "public Idn QueryIdn()",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "QueryIdn",
+    "targetOperation": "QueryIdentity",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 20,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void Reset()",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "Reset",
+    "targetOperation": "Reset",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 22,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void OutputOff()",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "OutputOff",
+    "targetOperation": "Shutdown",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 39,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void SetVoltage(uint channel, double volts)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "SetVoltage",
+    "targetOperation": "DcPowerSupplySetVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 43,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "nonnegative",
+        "name": "amps",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void SetCurrentLimit(uint channel, double amps)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "SetCurrentLimit",
+    "targetOperation": "DcPowerSupplySetCurrentLimit",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 47,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void OutputEnable(uint channel, bool enabled)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "OutputEnable",
+    "targetOperation": "DcPowerSupplyOutputEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 55,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "public bool OutputStateQuery(uint channel)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "OutputStateQuery",
+    "targetOperation": "DcPowerSupplyOutputStateQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 59,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void OvpLevel(uint channel, double volts)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "OvpLevel",
+    "targetOperation": "DcPowerSupplyOvpLevel",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 63,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void OvpEnable(uint channel, bool enabled)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "OvpEnable",
+    "targetOperation": "DcPowerSupplyOvpEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 70,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "public bool OvpQuery(uint channel)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "OvpQuery",
+    "targetOperation": "DcPowerSupplyOvpQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "explicit-sense-mode-replaces-boolean",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 74,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public void SenseEnable(uint channel, bool enabled)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "SenseEnable",
+    "targetOperation": "DcPowerSupplySetSenseMode",
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 83,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double ReadVoltage(uint channel)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "ReadVoltage",
+    "targetOperation": "DcPowerSupplyReadVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 87,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public double ReadCurrent(uint channel)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "ReadCurrent",
+    "targetOperation": "DcPowerSupplyReadCurrent",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 16,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public InstrumentSession Session =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "Session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 37,
+    "mode": "sync",
+    "parameters": [],
+    "result": "count",
+    "signature": "public uint ChannelCount =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "ChannelCount",
+    "targetOperation": "DcPowerSupplyChannelCount",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 14,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public DcPowerSupply(InstrumentSession session)",
+    "source": "dotnet/src/InstrumentComponents/Classes/DcPowerSupply.cs",
+    "sourceSha256": "dc4c3fbf327a620a1b0054e65d9a0a6427d4b105251dac5c419db42ae947d4ab",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 15,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn new(session: AsyncInstrumentSession) -> Self",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 19,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session(&self) -> &AsyncInstrumentSession",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 23,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session_mut(&mut self) -> &mut AsyncInstrumentSession",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "session_mut",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 36,
+    "mode": "async",
+    "parameters": [],
+    "result": "count",
+    "signature": "pub fn channel_count(&self) -> u32",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "channel_count",
+    "targetOperation": "DcPowerSupplyChannelCount",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 41,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn set_voltage(&mut self, channel: u32, volts: f64) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "set_voltage",
+    "targetOperation": "DcPowerSupplySetVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 54,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "nonnegative",
+        "name": "amps",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn set_current_limit(&mut self, channel: u32, amps: f64) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "set_current_limit",
+    "targetOperation": "DcPowerSupplySetCurrentLimit",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 67,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn output_enable(&mut self, channel: u32, enabled: bool) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "output_enable",
+    "targetOperation": "DcPowerSupplyOutputEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 78,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "pub async fn output_state_query(&mut self, channel: u32) -> Result<bool>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "output_state_query",
+    "targetOperation": "DcPowerSupplyOutputStateQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 89,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn ovp_level(&mut self, channel: u32, volts: f64) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "ovp_level",
+    "targetOperation": "DcPowerSupplyOvpLevel",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 102,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn ovp_enable(&mut self, channel: u32, enabled: bool) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "ovp_enable",
+    "targetOperation": "DcPowerSupplyOvpEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 113,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "pub async fn ovp_query(&mut self, channel: u32) -> Result<bool>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "ovp_query",
+    "targetOperation": "DcPowerSupplyOvpQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "explicit-sense-mode-replaces-boolean",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 124,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub async fn sense_enable(&mut self, channel: u32, enabled: bool) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "sense_enable",
+    "targetOperation": "DcPowerSupplySetSenseMode",
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 140,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn read_voltage(&mut self, channel: u32) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "read_voltage",
+    "targetOperation": "DcPowerSupplyReadVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "Rust",
+    "line": 151,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "pub async fn read_current(&mut self, channel: u32) -> Result<f64>",
+    "source": "crates/instrument/src/classes/async_dc_psu.rs",
+    "sourceSha256": "2d4df78e0e421d9a6eebb6ef856abf4575de6b1d9c7463bb44ec3ac7347f80d1",
+    "symbol": "read_current",
+    "targetOperation": "DcPowerSupplyReadCurrent",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 17,
+    "mode": "async",
+    "parameters": [],
+    "result": "identity",
+    "signature": "public Task<Idn> QueryIdnAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "QueryIdnAsync",
+    "targetOperation": "QueryIdentity",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 20,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task ResetAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "ResetAsync",
+    "targetOperation": "Reset",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 23,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public async Task OutputOffAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "OutputOffAsync",
+    "targetOperation": "Shutdown",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 45,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task SetVoltageAsync(uint channel, double volts, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "SetVoltageAsync",
+    "targetOperation": "DcPowerSupplySetVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 49,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "nonnegative",
+        "name": "amps",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task SetCurrentLimitAsync(uint channel, double amps, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "SetCurrentLimitAsync",
+    "targetOperation": "DcPowerSupplySetCurrentLimit",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 53,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task OutputEnableAsync(uint channel, bool enabled, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "OutputEnableAsync",
+    "targetOperation": "DcPowerSupplyOutputEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 61,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "public async Task<bool> OutputStateQueryAsync(uint channel, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "OutputStateQueryAsync",
+    "targetOperation": "DcPowerSupplyOutputStateQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 68,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "volts",
+        "type": "number"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task OvpLevelAsync(uint channel, double volts, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "OvpLevelAsync",
+    "targetOperation": "DcPowerSupplyOvpLevel",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 72,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "enabled",
+        "type": "boolean"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task OvpEnableAsync(uint channel, bool enabled, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "OvpEnableAsync",
+    "targetOperation": "DcPowerSupplyOvpEnable",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 79,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "public async Task<bool> OvpQueryAsync(uint channel, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "OvpQueryAsync",
+    "targetOperation": "DcPowerSupplyOvpQuery",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "explicit-sense-mode-replaces-boolean",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 86,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public Task SenseEnableAsync(uint channel, bool enabled, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "SenseEnableAsync",
+    "targetOperation": "DcPowerSupplySetSenseMode",
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 95,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public async Task<double> ReadVoltageAsync(uint channel, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "ReadVoltageAsync",
+    "targetOperation": "DcPowerSupplyReadVoltage",
+    "unit": "Volt",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 102,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "channel",
+        "type": "channel"
+      }
+    ],
+    "result": "quantity",
+    "signature": "public async Task<double> ReadCurrentAsync(uint channel, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "ReadCurrentAsync",
+    "targetOperation": "DcPowerSupplyReadCurrent",
+    "unit": "Ampere",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 15,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public AsyncInstrumentSession Session =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "Session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 43,
+    "mode": "async",
+    "parameters": [],
+    "result": "count",
+    "signature": "public uint ChannelCount =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "ChannelCount",
+    "targetOperation": "DcPowerSupplyChannelCount",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "DcPowerSupply",
+    "language": "C#",
+    "line": 13,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public AsyncDcPowerSupply(AsyncInstrumentSession session)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncDcPowerSupply.cs",
+    "sourceSha256": "3de2a050a3dc7ee5d3377480fc3e875392f79d2005b99b2f5e1a96468bf7b54b",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 16,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn new(session: InstrumentSession) -> Self",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 20,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session(&self) -> &InstrumentSession",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 24,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session_mut(&mut self) -> &mut InstrumentSession",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "session_mut",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 39,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn path_label(ch1: u32, ch2: u32) -> String",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "path_label",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 44,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn close_route(&mut self, ch1: u32, ch2: u32) -> Result<()>",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "close_route",
+    "targetOperation": "SwitchCloseRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 54,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub fn open_route(&mut self, ch1: u32, ch2: u32) -> Result<()>",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "open_route",
+    "targetOperation": "SwitchOpenRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 64,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "pub fn is_closed(&mut self, ch1: u32, ch2: u32) -> Result<bool>",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "is_closed",
+    "targetOperation": "SwitchIsClosed",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 75,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "pub fn open_all(&mut self) -> Result<()>",
+    "source": "crates/instrument/src/classes/switch.rs",
+    "sourceSha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a",
+    "symbol": "open_all",
+    "targetOperation": "SwitchOpenAll",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 22,
+    "mode": "sync",
+    "parameters": [],
+    "result": "identity",
+    "signature": "public Idn QueryIdn()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "QueryIdn",
+    "targetOperation": "QueryIdentity",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 24,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void Reset()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "Reset",
+    "targetOperation": "Reset",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 26,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void OutputOff()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "OutputOff",
+    "targetOperation": "Shutdown",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 34,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public static string PathLabel(uint ch1, uint ch2)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "PathLabel",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 37,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void CloseRoute(uint ch1, uint ch2)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "CloseRoute",
+    "targetOperation": "SwitchCloseRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 42,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "public void OpenRoute(uint ch1, uint ch2)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "OpenRoute",
+    "targetOperation": "SwitchOpenRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 46,
+    "mode": "sync",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "public bool IsClosed(uint ch1, uint ch2)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "IsClosed",
+    "targetOperation": "SwitchIsClosed",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 50,
+    "mode": "sync",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public void OpenAll()",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "OpenAll",
+    "targetOperation": "SwitchOpenAll",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 20,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public InstrumentSession Session =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "Session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 18,
+    "mode": "sync",
+    "parameters": [],
+    "result": null,
+    "signature": "public Switch(InstrumentSession session)",
+    "source": "dotnet/src/InstrumentComponents/Classes/Switch.cs",
+    "sourceSha256": "566f10dea90ea95bc294ce2d98a2c567d048df87adaec87feace9439ef59932b",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 14,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn new(session: AsyncInstrumentSession) -> Self",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 18,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session(&self) -> &AsyncInstrumentSession",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 22,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn session_mut(&mut self) -> &mut AsyncInstrumentSession",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "session_mut",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 35,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "pub fn path_label(ch1: u32, ch2: u32) -> String",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "path_label",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 40,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn close_route(&mut self, ch1: u32, ch2: u32) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "close_route",
+    "targetOperation": "SwitchCloseRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 50,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "pub async fn open_route(&mut self, ch1: u32, ch2: u32) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "open_route",
+    "targetOperation": "SwitchOpenRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 60,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "pub async fn is_closed(&mut self, ch1: u32, ch2: u32) -> Result<bool>",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "is_closed",
+    "targetOperation": "SwitchIsClosed",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "Rust",
+    "line": 71,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "pub async fn open_all(&mut self) -> Result<()>",
+    "source": "crates/instrument/src/classes/async_switch.rs",
+    "sourceSha256": "82949cfe0bfbc79a3993550eb638b0748258e8a6c619be328e9c6bdc52d1fc80",
+    "symbol": "open_all",
+    "targetOperation": "SwitchOpenAll",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 21,
+    "mode": "async",
+    "parameters": [],
+    "result": "identity",
+    "signature": "public Task<Idn> QueryIdnAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "QueryIdnAsync",
+    "targetOperation": "QueryIdentity",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 24,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task ResetAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "ResetAsync",
+    "targetOperation": "Reset",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 27,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task OutputOffAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "OutputOffAsync",
+    "targetOperation": "Shutdown",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 35,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public static string PathLabel(uint ch1, uint ch2)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "PathLabel",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 37,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task CloseRouteAsync(uint ch1, uint ch2, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "CloseRouteAsync",
+    "targetOperation": "SwitchCloseRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 41,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "unit",
+    "signature": "public Task OpenRouteAsync(uint ch1, uint ch2, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "OpenRouteAsync",
+    "targetOperation": "SwitchOpenRoute",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 45,
+    "mode": "async",
+    "parameters": [
+      {
+        "constraint": "finite",
+        "name": "ch1",
+        "type": "channel"
+      },
+      {
+        "constraint": "finite",
+        "name": "ch2",
+        "type": "channel"
+      }
+    ],
+    "result": "boolean",
+    "signature": "public async Task<bool> IsClosedAsync(uint ch1, uint ch2, CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "IsClosedAsync",
+    "targetOperation": "SwitchIsClosed",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "implemented-neutral-contract",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 52,
+    "mode": "async",
+    "parameters": [],
+    "result": "unit",
+    "signature": "public Task OpenAllAsync(CancellationToken cancellationToken = default)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "OpenAllAsync",
+    "targetOperation": "SwitchOpenAll",
+    "unit": "Unknown",
+    "verification": "shared typed operation/traffic/value cases"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 19,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public AsyncInstrumentSession Session =>",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "Session",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  },
+  {
+    "deviceImplementation": "external vendor package required for final cutover",
+    "disposition": "removed-constructor-session-or-raw-escape",
+    "kind": "Switch",
+    "language": "C#",
+    "line": 17,
+    "mode": "async",
+    "parameters": [],
+    "result": null,
+    "signature": "public AsyncSwitch(AsyncInstrumentSession session)",
+    "source": "dotnet/src/InstrumentComponents/Classes/AsyncSwitch.cs",
+    "sourceSha256": "78eeda4578ba36b4d45607d7d6aa0aad7a66ddae41a0f64d283286eb5f14c66c",
+    "symbol": "new",
+    "targetOperation": null,
+    "unit": null,
+    "verification": "intentional breaking API change; no constructor compatibility requirement"
+  }
+]

@@ -2878,14 +2878,14 @@
           "operation": "SwitchCloseRoute",
           "arguments": {
             "ch1": 1,
-            "ch2": 1
+            "ch2": 3
           }
         }
       ],
       "script": [
         {
           "kind": "write",
-          "message": ":ROUTe:CLOS (@(1,1))"
+          "message": ":ROUTe:CLOS (@(1,3))"
         },
         {
           "kind": "close"
@@ -2902,14 +2902,14 @@
           "operation": "SwitchOpenRoute",
           "arguments": {
             "ch1": 1,
-            "ch2": 1
+            "ch2": 3
           }
         }
       ],
       "script": [
         {
           "kind": "write",
-          "message": ":ROUTe:OPEN (@(1,1))"
+          "message": ":ROUTe:OPEN (@(1,3))"
         },
         {
           "kind": "close"
@@ -2926,14 +2926,14 @@
           "operation": "SwitchIsClosed",
           "arguments": {
             "ch1": 1,
-            "ch2": 1
+            "ch2": 3
           }
         }
       ],
       "script": [
         {
           "kind": "query",
-          "message": ":ROUTe:CLOS? (@(1,1))",
+          "message": ":ROUTe:CLOS? (@(1,3))",
           "response": "1"
         },
         {
@@ -3041,14 +3041,14 @@
           "operation": "SwitchCloseRoute",
           "arguments": {
             "ch1": 1,
-            "ch2": 1
+            "ch2": 3
           }
         }
       ],
       "script": [
         {
           "kind": "write",
-          "message": ":ROUTe:CLOS (@(1,1))"
+          "message": ":ROUTe:CLOS (@(1,3))"
         },
         {
           "kind": "close"
@@ -3065,14 +3065,14 @@
           "operation": "SwitchOpenRoute",
           "arguments": {
             "ch1": 1,
-            "ch2": 1
+            "ch2": 3
           }
         }
       ],
       "script": [
         {
           "kind": "write",
-          "message": ":ROUTe:OPEN (@(1,1))"
+          "message": ":ROUTe:OPEN (@(1,3))"
         },
         {
           "kind": "close"
@@ -3089,14 +3089,14 @@
           "operation": "SwitchIsClosed",
           "arguments": {
             "ch1": 1,
-            "ch2": 1
+            "ch2": 3
           }
         }
       ],
       "script": [
         {
           "kind": "query",
-          "message": ":ROUTe:CLOS? (@(1,1))",
+          "message": ":ROUTe:CLOS? (@(1,3))",
           "response": "1"
         },
         {
@@ -4890,6 +4890,2304 @@
         }
       ],
       "expectedError": "InvalidArgument"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureResistance2Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmMeasureTemperature-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmConfigureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmConfigureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmConfigureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmConfigureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmConfigureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmConfigureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmInitiate-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmInitiate",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "INIT",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmFetch-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmFetch",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "FETC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmRead-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmRead",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|DmmSoftwareTrigger-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmSoftwareTrigger",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*TRG",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2000|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:AC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:DC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR:AC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureResistance2Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:RES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:FRES?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmMeasureTemperature-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmConfigureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmConfigureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmConfigureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmConfigureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmConfigureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmConfigureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmInitiate-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmInitiate",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "INIT",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmFetch-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmFetch",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "FETC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmRead-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmRead",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT:DC?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DmmSoftwareTrigger-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmSoftwareTrigger",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*TRG",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplySetVoltage-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "arguments": {
+            "channel": 1,
+            "volts": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:VOLT 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "arguments": {
+            "channel": 1,
+            "amps": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:CURR 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplyOutputEnable-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "arguments": {
+            "channel": 1,
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP1 ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":OUTP1?",
+          "response": "1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplyOvpLevel-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "arguments": {
+            "channel": 1,
+            "volts": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:VOLT:PROT 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplyOvpEnable-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "arguments": {
+            "channel": 1,
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:VOLT:PROT:STAT ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplyOvpQuery-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SOUR1:VOLT:PROT:STAT?",
+          "response": "1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplyReadVoltage-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT? 1",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplyReadCurrent-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR? 1",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|DcPowerSupplySetSenseMode-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplySetSenseMode",
+          "arguments": {
+            "channel": 1,
+            "mode": "Internal"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP1:SENS OFF",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.2602b|B|Shutdown-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP1 OFF",
+          "error": "Transport"
+        },
+        {
+          "kind": "write",
+          "message": ":OUTP3 OFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Shutdown"
+    },
+    {
+      "id": "keithley.3706a|B|SwitchCloseRoute-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchCloseRoute",
+          "arguments": {
+            "ch1": 1,
+            "ch2": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:CLOS (@(1,3))",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.3706a|B|SwitchOpenRoute-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchOpenRoute",
+          "arguments": {
+            "ch1": 1,
+            "ch2": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:OPEN (@(1,3))",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.3706a|B|SwitchIsClosed-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchIsClosed",
+          "arguments": {
+            "ch1": 1,
+            "ch2": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUTe:CLOS? (@(1,3))",
+          "response": "1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.3706a|B|SwitchOpenAll-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchOpenAll",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:OPEN:ALL",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.3706a|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.3706a|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.3706a|B|Shutdown-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:OPEN:ALL",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Shutdown"
+    },
+    {
+      "id": "keithley.707b|B|SwitchCloseRoute-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchCloseRoute",
+          "arguments": {
+            "ch1": 1,
+            "ch2": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:CLOS (@(1,3))",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.707b|B|SwitchOpenRoute-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchOpenRoute",
+          "arguments": {
+            "ch1": 1,
+            "ch2": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:OPEN (@(1,3))",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.707b|B|SwitchIsClosed-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchIsClosed",
+          "arguments": {
+            "ch1": 1,
+            "ch2": 3
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":ROUTe:CLOS? (@(1,3))",
+          "response": "1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.707b|B|SwitchOpenAll-0-transport-failure",
+      "calls": [
+        {
+          "operation": "SwitchOpenAll",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:OPEN:ALL",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.707b|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.707b|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.707b|B|Shutdown-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":ROUTe:OPEN:ALL",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Shutdown"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"VOLT:DC\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"VOLT:AC\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"CURR:DC\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"CURR:AC\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"RES\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureResistance2Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"RES\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"FRES\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmMeasureTemperature-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"TEMP\";:READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmConfigureVoltageDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmConfigureVoltageAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:VOLT:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmConfigureCurrentDc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:DC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmConfigureCurrentAc-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:CURR:AC",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmConfigureResistance-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:RES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmConfigureResistance4Wire-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "arguments": {
+            "range": null,
+            "resolution": null
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":CONF:FRES",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmInitiate-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmInitiate",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "INIT",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmFetch-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmFetch",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"VOLT:DC\";:READ?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "FETC?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmRead-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DmmRead",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SENS:FUNC \"VOLT:DC\";:READ?",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "READ?",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|DmmSoftwareTrigger-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DmmSoftwareTrigger",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*TRG",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.dmm6500|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "arguments": {
+            "channel": 1,
+            "volts": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:VOLT 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "arguments": {
+            "channel": 1,
+            "amps": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:CURR 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplyOutputEnable-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "arguments": {
+            "channel": 1,
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP1 ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplyOutputStateQuery-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":OUTP1?",
+          "response": "1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "arguments": {
+            "channel": 1,
+            "volts": 2.5
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:VOLT:PROT 2.5",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplyOvpEnable-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "arguments": {
+            "channel": 1,
+            "enabled": true
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":SOUR1:VOLT:PROT:STAT ON",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplyOvpQuery-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":SOUR1:VOLT:PROT:STAT?",
+          "response": "1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplyReadVoltage-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT? 1",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "arguments": {
+            "channel": 1
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:CURR? 1",
+          "response": "3.3",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|DcPowerSupplySetSenseMode-0-transport-failure",
+      "calls": [
+        {
+          "operation": "DcPowerSupplySetSenseMode",
+          "arguments": {
+            "channel": 1,
+            "mode": "Internal"
+          }
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP1:SENS OFF",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|QueryIdentity-0-transport-failure",
+      "calls": [
+        {
+          "operation": "QueryIdentity",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": "*IDN?",
+          "response": "Validation,Device,SN,1",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|Reset-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Reset",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": "*RST",
+          "error": "Transport"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Transport"
+    },
+    {
+      "id": "keithley.e36312a|B|Shutdown-0-transport-failure",
+      "calls": [
+        {
+          "operation": "Shutdown",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "write",
+          "message": ":OUTP1 OFF",
+          "error": "Transport"
+        },
+        {
+          "kind": "write",
+          "message": ":OUTP3 OFF"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expectedError": "Shutdown"
+    },
+    {
+      "id": "keithley.2602b|B|cross-class-temperature-state",
+      "calls": [
+        {
+          "operation": "DmmMeasureTemperature",
+          "arguments": {
+            "range": null
+          }
+        },
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "arguments": {
+            "channel": 1
+          }
+        },
+        {
+          "operation": "DmmFetch",
+          "arguments": {}
+        }
+      ],
+      "script": [
+        {
+          "kind": "query",
+          "message": ":MEAS:TEMP?",
+          "response": "21"
+        },
+        {
+          "kind": "query",
+          "message": ":MEAS:VOLT? 1",
+          "response": "3.3"
+        },
+        {
+          "kind": "query",
+          "message": "FETC?",
+          "response": "22"
+        },
+        {
+          "kind": "close"
+        }
+      ],
+      "expected": {
+        "kind": "quantity",
+        "value": 22.0,
+        "unit": "Unknown"
+      }
     }
   ]
 }
