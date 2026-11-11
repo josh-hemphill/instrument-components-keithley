@@ -1,0 +1,902 @@
+[
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureVoltageDc",
+    "cases": [
+      "keithley.2000|B|DmmMeasureVoltageDc-0",
+      "keithley.2000|B|DmmMeasureVoltageDc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureVoltageAc",
+    "cases": [
+      "keithley.2000|B|DmmMeasureVoltageAc-0",
+      "keithley.2000|B|DmmMeasureVoltageAc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureCurrentDc",
+    "cases": [
+      "keithley.2000|B|DmmMeasureCurrentDc-0",
+      "keithley.2000|B|DmmMeasureCurrentDc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureCurrentAc",
+    "cases": [
+      "keithley.2000|B|DmmMeasureCurrentAc-0",
+      "keithley.2000|B|DmmMeasureCurrentAc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureResistance",
+    "cases": [
+      "keithley.2000|B|DmmMeasureResistance-0",
+      "keithley.2000|B|DmmMeasureResistance-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureResistance2Wire",
+    "cases": [
+      "keithley.2000|B|DmmMeasureResistance2Wire-0",
+      "keithley.2000|B|DmmMeasureResistance2Wire-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureResistance4Wire",
+    "cases": [
+      "keithley.2000|B|DmmMeasureResistance4Wire-0",
+      "keithley.2000|B|DmmMeasureResistance4Wire-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmMeasureTemperature",
+    "cases": [
+      "keithley.2000|B|DmmMeasureTemperature-0",
+      "keithley.2000|B|DmmMeasureTemperature-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmConfigureVoltageDc",
+    "cases": [
+      "keithley.2000|B|DmmConfigureVoltageDc-0",
+      "keithley.2000|B|DmmConfigureVoltageDc-1",
+      "keithley.2000|B|DmmConfigureVoltageDc-2",
+      "keithley.2000|B|DmmConfigureVoltageDc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmConfigureVoltageAc",
+    "cases": [
+      "keithley.2000|B|DmmConfigureVoltageAc-0",
+      "keithley.2000|B|DmmConfigureVoltageAc-1",
+      "keithley.2000|B|DmmConfigureVoltageAc-2",
+      "keithley.2000|B|DmmConfigureVoltageAc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmConfigureCurrentDc",
+    "cases": [
+      "keithley.2000|B|DmmConfigureCurrentDc-0",
+      "keithley.2000|B|DmmConfigureCurrentDc-1",
+      "keithley.2000|B|DmmConfigureCurrentDc-2",
+      "keithley.2000|B|DmmConfigureCurrentDc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmConfigureCurrentAc",
+    "cases": [
+      "keithley.2000|B|DmmConfigureCurrentAc-0",
+      "keithley.2000|B|DmmConfigureCurrentAc-1",
+      "keithley.2000|B|DmmConfigureCurrentAc-2",
+      "keithley.2000|B|DmmConfigureCurrentAc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmConfigureResistance",
+    "cases": [
+      "keithley.2000|B|DmmConfigureResistance-0",
+      "keithley.2000|B|DmmConfigureResistance-1",
+      "keithley.2000|B|DmmConfigureResistance-2",
+      "keithley.2000|B|DmmConfigureResistance-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmConfigureResistance4Wire",
+    "cases": [
+      "keithley.2000|B|DmmConfigureResistance4Wire-0",
+      "keithley.2000|B|DmmConfigureResistance4Wire-1",
+      "keithley.2000|B|DmmConfigureResistance4Wire-2",
+      "keithley.2000|B|DmmConfigureResistance4Wire-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmInitiate",
+    "cases": [
+      "keithley.2000|B|DmmInitiate-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmFetch",
+    "cases": [
+      "keithley.2000|B|DmmFetch-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmRead",
+    "cases": [
+      "keithley.2000|B|DmmRead-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "DmmSoftwareTrigger",
+    "cases": [
+      "keithley.2000|B|DmmSoftwareTrigger-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "QueryIdentity",
+    "cases": [
+      "keithley.2000|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "Reset",
+    "cases": [
+      "keithley.2000|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2000",
+    "operation": "Shutdown",
+    "cases": [
+      "keithley.2000|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureVoltageDc",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureVoltageDc-0",
+      "keithley.2602b|B|DmmMeasureVoltageDc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureVoltageAc",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureVoltageAc-0",
+      "keithley.2602b|B|DmmMeasureVoltageAc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureCurrentDc",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureCurrentDc-0",
+      "keithley.2602b|B|DmmMeasureCurrentDc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureCurrentAc",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureCurrentAc-0",
+      "keithley.2602b|B|DmmMeasureCurrentAc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureResistance",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureResistance-0",
+      "keithley.2602b|B|DmmMeasureResistance-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureResistance2Wire",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureResistance2Wire-0",
+      "keithley.2602b|B|DmmMeasureResistance2Wire-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureResistance4Wire",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureResistance4Wire-0",
+      "keithley.2602b|B|DmmMeasureResistance4Wire-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmMeasureTemperature",
+    "cases": [
+      "keithley.2602b|B|DmmMeasureTemperature-0",
+      "keithley.2602b|B|DmmMeasureTemperature-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmConfigureVoltageDc",
+    "cases": [
+      "keithley.2602b|B|DmmConfigureVoltageDc-0",
+      "keithley.2602b|B|DmmConfigureVoltageDc-1",
+      "keithley.2602b|B|DmmConfigureVoltageDc-2",
+      "keithley.2602b|B|DmmConfigureVoltageDc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmConfigureVoltageAc",
+    "cases": [
+      "keithley.2602b|B|DmmConfigureVoltageAc-0",
+      "keithley.2602b|B|DmmConfigureVoltageAc-1",
+      "keithley.2602b|B|DmmConfigureVoltageAc-2",
+      "keithley.2602b|B|DmmConfigureVoltageAc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmConfigureCurrentDc",
+    "cases": [
+      "keithley.2602b|B|DmmConfigureCurrentDc-0",
+      "keithley.2602b|B|DmmConfigureCurrentDc-1",
+      "keithley.2602b|B|DmmConfigureCurrentDc-2",
+      "keithley.2602b|B|DmmConfigureCurrentDc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmConfigureCurrentAc",
+    "cases": [
+      "keithley.2602b|B|DmmConfigureCurrentAc-0",
+      "keithley.2602b|B|DmmConfigureCurrentAc-1",
+      "keithley.2602b|B|DmmConfigureCurrentAc-2",
+      "keithley.2602b|B|DmmConfigureCurrentAc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmConfigureResistance",
+    "cases": [
+      "keithley.2602b|B|DmmConfigureResistance-0",
+      "keithley.2602b|B|DmmConfigureResistance-1",
+      "keithley.2602b|B|DmmConfigureResistance-2",
+      "keithley.2602b|B|DmmConfigureResistance-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmConfigureResistance4Wire",
+    "cases": [
+      "keithley.2602b|B|DmmConfigureResistance4Wire-0",
+      "keithley.2602b|B|DmmConfigureResistance4Wire-1",
+      "keithley.2602b|B|DmmConfigureResistance4Wire-2",
+      "keithley.2602b|B|DmmConfigureResistance4Wire-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmInitiate",
+    "cases": [
+      "keithley.2602b|B|DmmInitiate-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmFetch",
+    "cases": [
+      "keithley.2602b|B|DmmFetch-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmRead",
+    "cases": [
+      "keithley.2602b|B|DmmRead-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DmmSoftwareTrigger",
+    "cases": [
+      "keithley.2602b|B|DmmSoftwareTrigger-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyChannelCount",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyChannelCount-0"
+    ],
+    "disposition": "implemented-with-explicit-inventory-binding"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplySetVoltage",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplySetVoltage-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplySetCurrentLimit",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyOutputEnable",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOutputEnable-0",
+      "keithley.2602b|B|DcPowerSupplyOutputEnable-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyOutputStateQuery",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyOvpLevel",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOvpLevel-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyOvpEnable",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOvpEnable-0",
+      "keithley.2602b|B|DcPowerSupplyOvpEnable-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyOvpQuery",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOvpQuery-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyReadVoltage",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyReadVoltage-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplyReadCurrent",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyReadCurrent-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "DcPowerSupplySetSenseMode",
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplySetSenseMode-0",
+      "keithley.2602b|B|DcPowerSupplySetSenseMode-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "QueryIdentity",
+    "cases": [
+      "keithley.2602b|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "Reset",
+    "cases": [
+      "keithley.2602b|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.2602b",
+    "operation": "Shutdown",
+    "cases": [
+      "keithley.2602b|B|Shutdown-0"
+    ],
+    "disposition": "implemented-with-explicit-inventory-binding"
+  },
+  {
+    "driver": "keithley.3706a",
+    "operation": "SwitchCloseRoute",
+    "cases": [
+      "keithley.3706a|B|SwitchCloseRoute-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.3706a",
+    "operation": "SwitchOpenRoute",
+    "cases": [
+      "keithley.3706a|B|SwitchOpenRoute-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.3706a",
+    "operation": "SwitchIsClosed",
+    "cases": [
+      "keithley.3706a|B|SwitchIsClosed-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.3706a",
+    "operation": "SwitchOpenAll",
+    "cases": [
+      "keithley.3706a|B|SwitchOpenAll-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.3706a",
+    "operation": "QueryIdentity",
+    "cases": [
+      "keithley.3706a|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.3706a",
+    "operation": "Reset",
+    "cases": [
+      "keithley.3706a|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.3706a",
+    "operation": "Shutdown",
+    "cases": [
+      "keithley.3706a|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.707b",
+    "operation": "SwitchCloseRoute",
+    "cases": [
+      "keithley.707b|B|SwitchCloseRoute-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.707b",
+    "operation": "SwitchOpenRoute",
+    "cases": [
+      "keithley.707b|B|SwitchOpenRoute-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.707b",
+    "operation": "SwitchIsClosed",
+    "cases": [
+      "keithley.707b|B|SwitchIsClosed-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.707b",
+    "operation": "SwitchOpenAll",
+    "cases": [
+      "keithley.707b|B|SwitchOpenAll-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.707b",
+    "operation": "QueryIdentity",
+    "cases": [
+      "keithley.707b|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.707b",
+    "operation": "Reset",
+    "cases": [
+      "keithley.707b|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.707b",
+    "operation": "Shutdown",
+    "cases": [
+      "keithley.707b|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureVoltageDc",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureVoltageDc-0",
+      "keithley.dmm6500|B|DmmMeasureVoltageDc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureVoltageAc",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureVoltageAc-0",
+      "keithley.dmm6500|B|DmmMeasureVoltageAc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureCurrentDc",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureCurrentDc-0",
+      "keithley.dmm6500|B|DmmMeasureCurrentDc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureCurrentAc",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureCurrentAc-0",
+      "keithley.dmm6500|B|DmmMeasureCurrentAc-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureResistance",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureResistance-0",
+      "keithley.dmm6500|B|DmmMeasureResistance-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureResistance2Wire",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureResistance2Wire-0",
+      "keithley.dmm6500|B|DmmMeasureResistance2Wire-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureResistance4Wire",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureResistance4Wire-0",
+      "keithley.dmm6500|B|DmmMeasureResistance4Wire-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmMeasureTemperature",
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureTemperature-0",
+      "keithley.dmm6500|B|DmmMeasureTemperature-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmConfigureVoltageDc",
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-0",
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-1",
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-2",
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmConfigureVoltageAc",
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-0",
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-1",
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-2",
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmConfigureCurrentDc",
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-0",
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-1",
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-2",
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmConfigureCurrentAc",
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-0",
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-1",
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-2",
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmConfigureResistance",
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureResistance-0",
+      "keithley.dmm6500|B|DmmConfigureResistance-1",
+      "keithley.dmm6500|B|DmmConfigureResistance-2",
+      "keithley.dmm6500|B|DmmConfigureResistance-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmConfigureResistance4Wire",
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-0",
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-1",
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-2",
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-3"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmInitiate",
+    "cases": [
+      "keithley.dmm6500|B|DmmInitiate-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmFetch",
+    "cases": [
+      "keithley.dmm6500|B|DmmFetch-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmRead",
+    "cases": [
+      "keithley.dmm6500|B|DmmRead-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "DmmSoftwareTrigger",
+    "cases": [
+      "keithley.dmm6500|B|DmmSoftwareTrigger-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "QueryIdentity",
+    "cases": [
+      "keithley.dmm6500|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "Reset",
+    "cases": [
+      "keithley.dmm6500|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "operation": "Shutdown",
+    "cases": [
+      "keithley.dmm6500|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyChannelCount",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyChannelCount-0"
+    ],
+    "disposition": "implemented-with-explicit-inventory-binding"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplySetVoltage",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplySetVoltage-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplySetCurrentLimit",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyOutputEnable",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyOutputEnable-0",
+      "keithley.e36312a|B|DcPowerSupplyOutputEnable-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyOutputStateQuery",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyOutputStateQuery-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyOvpLevel",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyOvpLevel-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyOvpEnable",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyOvpEnable-0",
+      "keithley.e36312a|B|DcPowerSupplyOvpEnable-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyOvpQuery",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyOvpQuery-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyReadVoltage",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyReadVoltage-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplyReadCurrent",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyReadCurrent-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "DcPowerSupplySetSenseMode",
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplySetSenseMode-0",
+      "keithley.e36312a|B|DcPowerSupplySetSenseMode-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "QueryIdentity",
+    "cases": [
+      "keithley.e36312a|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "Reset",
+    "cases": [
+      "keithley.e36312a|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "keithley.e36312a",
+    "operation": "Shutdown",
+    "cases": [
+      "keithley.e36312a|B|Shutdown-0"
+    ],
+    "disposition": "implemented-with-explicit-inventory-binding"
+  }
+]
