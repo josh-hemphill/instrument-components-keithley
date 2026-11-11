@@ -1,48 +1,118 @@
 [
   {
     "cases": [
-      "keithley.2000|B|DmmMeasureVoltageDc-0",
-      "keithley.2000|B|DmmMeasureVoltageDc-1",
+      "keithley.2000|B|DmmConfigureCurrentAc-0",
+      "keithley.2000|B|DmmConfigureCurrentAc-1",
+      "keithley.2000|B|DmmConfigureCurrentAc-2",
+      "keithley.2000|B|DmmConfigureCurrentAc-3",
+      "keithley.2000|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2000",
+    "negativeCases": [
+      "keithley.2000|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentAc"
+  },
+  {
+    "cases": [
+      "keithley.2000|B|DmmConfigureCurrentDc-0",
+      "keithley.2000|B|DmmConfigureCurrentDc-1",
+      "keithley.2000|B|DmmConfigureCurrentDc-2",
+      "keithley.2000|B|DmmConfigureCurrentDc-3",
+      "keithley.2000|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2000",
+    "negativeCases": [
+      "keithley.2000|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentDc"
+  },
+  {
+    "cases": [
+      "keithley.2000|B|DmmConfigureResistance-0",
+      "keithley.2000|B|DmmConfigureResistance-1",
+      "keithley.2000|B|DmmConfigureResistance-2",
+      "keithley.2000|B|DmmConfigureResistance-3",
+      "keithley.2000|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2000",
+    "negativeCases": [
+      "keithley.2000|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance"
+  },
+  {
+    "cases": [
+      "keithley.2000|B|DmmConfigureResistance4Wire-0",
+      "keithley.2000|B|DmmConfigureResistance4Wire-1",
+      "keithley.2000|B|DmmConfigureResistance4Wire-2",
+      "keithley.2000|B|DmmConfigureResistance4Wire-3",
+      "keithley.2000|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2000",
+    "negativeCases": [
+      "keithley.2000|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance4Wire"
+  },
+  {
+    "cases": [
+      "keithley.2000|B|DmmConfigureVoltageAc-0",
+      "keithley.2000|B|DmmConfigureVoltageAc-1",
+      "keithley.2000|B|DmmConfigureVoltageAc-2",
+      "keithley.2000|B|DmmConfigureVoltageAc-3",
+      "keithley.2000|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2000",
+    "negativeCases": [
+      "keithley.2000|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageAc"
+  },
+  {
+    "cases": [
+      "keithley.2000|B|DmmConfigureVoltageDc-0",
+      "keithley.2000|B|DmmConfigureVoltageDc-1",
+      "keithley.2000|B|DmmConfigureVoltageDc-2",
+      "keithley.2000|B|DmmConfigureVoltageDc-3",
+      "keithley.2000|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2000",
+    "negativeCases": [
+      "keithley.2000|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageDc"
+  },
+  {
+    "cases": [
       "keithley.2000|B|DmmFetch-0",
-      "keithley.2000|B|DmmRead-0",
-      "keithley.2000|B|DmmMeasureVoltageDc-0-transport-failure",
-      "keithley.2000|B|DmmFetch-0-transport-failure",
-      "keithley.2000|B|DmmRead-0-transport-failure"
+      "keithley.2000|B|temperature-DmmFetch",
+      "keithley.2000|B|DmmFetch-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2000",
     "negativeCases": [
-      "keithley.2000|B|DmmMeasureVoltageDc-0-transport-failure",
-      "keithley.2000|B|DmmFetch-0-transport-failure",
-      "keithley.2000|B|DmmRead-0-transport-failure"
+      "keithley.2000|B|DmmFetch-0-transport-failure"
     ],
-    "operation": "DmmMeasureVoltageDc"
+    "operation": "DmmFetch"
   },
   {
     "cases": [
-      "keithley.2000|B|DmmMeasureVoltageAc-0",
-      "keithley.2000|B|DmmMeasureVoltageAc-1",
-      "keithley.2000|B|DmmMeasureVoltageAc-0-transport-failure"
+      "keithley.2000|B|DmmInitiate-0",
+      "keithley.2000|B|DmmInitiate-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2000",
     "negativeCases": [
-      "keithley.2000|B|DmmMeasureVoltageAc-0-transport-failure"
+      "keithley.2000|B|DmmInitiate-0-transport-failure"
     ],
-    "operation": "DmmMeasureVoltageAc"
-  },
-  {
-    "cases": [
-      "keithley.2000|B|DmmMeasureCurrentDc-0",
-      "keithley.2000|B|DmmMeasureCurrentDc-1",
-      "keithley.2000|B|DmmMeasureCurrentDc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2000",
-    "negativeCases": [
-      "keithley.2000|B|DmmMeasureCurrentDc-0-transport-failure"
-    ],
-    "operation": "DmmMeasureCurrentDc"
+    "operation": "DmmInitiate"
   },
   {
     "cases": [
@@ -56,6 +126,19 @@
       "keithley.2000|B|DmmMeasureCurrentAc-0-transport-failure"
     ],
     "operation": "DmmMeasureCurrentAc"
+  },
+  {
+    "cases": [
+      "keithley.2000|B|DmmMeasureCurrentDc-0",
+      "keithley.2000|B|DmmMeasureCurrentDc-1",
+      "keithley.2000|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2000",
+    "negativeCases": [
+      "keithley.2000|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentDc"
   },
   {
     "cases": [
@@ -113,118 +196,33 @@
   },
   {
     "cases": [
-      "keithley.2000|B|DmmConfigureVoltageDc-0",
-      "keithley.2000|B|DmmConfigureVoltageDc-1",
-      "keithley.2000|B|DmmConfigureVoltageDc-2",
-      "keithley.2000|B|DmmConfigureVoltageDc-3",
-      "keithley.2000|B|DmmConfigureVoltageDc-0-transport-failure"
+      "keithley.2000|B|DmmMeasureVoltageAc-0",
+      "keithley.2000|B|DmmMeasureVoltageAc-1",
+      "keithley.2000|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2000",
     "negativeCases": [
-      "keithley.2000|B|DmmConfigureVoltageDc-0-transport-failure"
+      "keithley.2000|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
-    "operation": "DmmConfigureVoltageDc"
+    "operation": "DmmMeasureVoltageAc"
   },
   {
     "cases": [
-      "keithley.2000|B|DmmConfigureVoltageAc-0",
-      "keithley.2000|B|DmmConfigureVoltageAc-1",
-      "keithley.2000|B|DmmConfigureVoltageAc-2",
-      "keithley.2000|B|DmmConfigureVoltageAc-3",
-      "keithley.2000|B|DmmConfigureVoltageAc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2000",
-    "negativeCases": [
-      "keithley.2000|B|DmmConfigureVoltageAc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureVoltageAc"
-  },
-  {
-    "cases": [
-      "keithley.2000|B|DmmConfigureCurrentDc-0",
-      "keithley.2000|B|DmmConfigureCurrentDc-1",
-      "keithley.2000|B|DmmConfigureCurrentDc-2",
-      "keithley.2000|B|DmmConfigureCurrentDc-3",
-      "keithley.2000|B|DmmConfigureCurrentDc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2000",
-    "negativeCases": [
-      "keithley.2000|B|DmmConfigureCurrentDc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureCurrentDc"
-  },
-  {
-    "cases": [
-      "keithley.2000|B|DmmConfigureCurrentAc-0",
-      "keithley.2000|B|DmmConfigureCurrentAc-1",
-      "keithley.2000|B|DmmConfigureCurrentAc-2",
-      "keithley.2000|B|DmmConfigureCurrentAc-3",
-      "keithley.2000|B|DmmConfigureCurrentAc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2000",
-    "negativeCases": [
-      "keithley.2000|B|DmmConfigureCurrentAc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureCurrentAc"
-  },
-  {
-    "cases": [
-      "keithley.2000|B|DmmConfigureResistance-0",
-      "keithley.2000|B|DmmConfigureResistance-1",
-      "keithley.2000|B|DmmConfigureResistance-2",
-      "keithley.2000|B|DmmConfigureResistance-3",
-      "keithley.2000|B|DmmConfigureResistance-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2000",
-    "negativeCases": [
-      "keithley.2000|B|DmmConfigureResistance-0-transport-failure"
-    ],
-    "operation": "DmmConfigureResistance"
-  },
-  {
-    "cases": [
-      "keithley.2000|B|DmmConfigureResistance4Wire-0",
-      "keithley.2000|B|DmmConfigureResistance4Wire-1",
-      "keithley.2000|B|DmmConfigureResistance4Wire-2",
-      "keithley.2000|B|DmmConfigureResistance4Wire-3",
-      "keithley.2000|B|DmmConfigureResistance4Wire-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2000",
-    "negativeCases": [
-      "keithley.2000|B|DmmConfigureResistance4Wire-0-transport-failure"
-    ],
-    "operation": "DmmConfigureResistance4Wire"
-  },
-  {
-    "cases": [
-      "keithley.2000|B|DmmInitiate-0",
-      "keithley.2000|B|DmmInitiate-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2000",
-    "negativeCases": [
-      "keithley.2000|B|DmmInitiate-0-transport-failure"
-    ],
-    "operation": "DmmInitiate"
-  },
-  {
-    "cases": [
+      "keithley.2000|B|DmmMeasureVoltageDc-0",
+      "keithley.2000|B|DmmMeasureVoltageDc-1",
       "keithley.2000|B|DmmFetch-0",
-      "keithley.2000|B|temperature-DmmFetch",
-      "keithley.2000|B|DmmFetch-0-transport-failure"
+      "keithley.2000|B|DmmRead-0",
+      "keithley.2000|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keithley.2000|B|DmmFetch-0-transport-failure",
+      "keithley.2000|B|DmmRead-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2000",
     "negativeCases": [
-      "keithley.2000|B|DmmFetch-0-transport-failure"
+      "keithley.2000|B|DmmMeasureVoltageDc-0-transport-failure"
     ],
-    "operation": "DmmFetch"
+    "operation": "DmmMeasureVoltageDc"
   },
   {
     "cases": [
@@ -286,48 +284,257 @@
   },
   {
     "cases": [
-      "keithley.2602b|B|DmmMeasureVoltageDc-0",
-      "keithley.2602b|B|DmmMeasureVoltageDc-1",
+      "keithley.2602b|B|DcPowerSupplyChannelCount-0",
+      "keithley.2602b|U|unknown-DcPowerSupplyChannelCount"
+    ],
+    "disposition": "explicit-inventory-binding-required",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|U|unknown-DcPowerSupplyChannelCount"
+    ],
+    "operation": "DcPowerSupplyChannelCount"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOutputEnable-0",
+      "keithley.2602b|B|DcPowerSupplyOutputEnable-1",
+      "keithley.2602b|B|DcPowerSupplyOutputEnable-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplyOutputEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputEnable"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0",
+      "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOutputStateQuery"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOvpEnable-0",
+      "keithley.2602b|B|DcPowerSupplyOvpEnable-1",
+      "keithley.2602b|B|DcPowerSupplyOvpEnable-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplyOvpEnable-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpEnable"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOvpLevel-0",
+      "keithley.2602b|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpLevel"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyOvpQuery-0",
+      "keithley.2602b|B|DcPowerSupplyOvpQuery-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplyOvpQuery-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpQuery"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyReadCurrent-0",
+      "keithley.2602b|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadCurrent"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplyReadVoltage-0",
+      "keithley.2602b|B|DcPowerSupplyReadVoltage-0-transport-failure",
+      "keithley.2602b|B|cross-class-temperature-state"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplyReadVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadVoltage"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0",
+      "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetCurrentLimit"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplySetSenseMode-0",
+      "keithley.2602b|B|DcPowerSupplySetSenseMode-1",
+      "keithley.2602b|B|DcPowerSupplySetSenseMode-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DcPowerSupplySetSenseMode-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetSenseMode"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DcPowerSupplySetVoltage-0",
+      "keithley.2602b|B|invalid-DcPowerSupplySetVoltage",
+      "keithley.2602b|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|invalid-DcPowerSupplySetVoltage",
+      "keithley.2602b|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetVoltage"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DmmConfigureCurrentAc-0",
+      "keithley.2602b|B|DmmConfigureCurrentAc-1",
+      "keithley.2602b|B|DmmConfigureCurrentAc-2",
+      "keithley.2602b|B|DmmConfigureCurrentAc-3",
+      "keithley.2602b|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentAc"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DmmConfigureCurrentDc-0",
+      "keithley.2602b|B|DmmConfigureCurrentDc-1",
+      "keithley.2602b|B|DmmConfigureCurrentDc-2",
+      "keithley.2602b|B|DmmConfigureCurrentDc-3",
+      "keithley.2602b|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentDc"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DmmConfigureResistance-0",
+      "keithley.2602b|B|DmmConfigureResistance-1",
+      "keithley.2602b|B|DmmConfigureResistance-2",
+      "keithley.2602b|B|DmmConfigureResistance-3",
+      "keithley.2602b|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DmmConfigureResistance4Wire-0",
+      "keithley.2602b|B|DmmConfigureResistance4Wire-1",
+      "keithley.2602b|B|DmmConfigureResistance4Wire-2",
+      "keithley.2602b|B|DmmConfigureResistance4Wire-3",
+      "keithley.2602b|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance4Wire"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DmmConfigureVoltageAc-0",
+      "keithley.2602b|B|DmmConfigureVoltageAc-1",
+      "keithley.2602b|B|DmmConfigureVoltageAc-2",
+      "keithley.2602b|B|DmmConfigureVoltageAc-3",
+      "keithley.2602b|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageAc"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DmmConfigureVoltageDc-0",
+      "keithley.2602b|B|DmmConfigureVoltageDc-1",
+      "keithley.2602b|B|DmmConfigureVoltageDc-2",
+      "keithley.2602b|B|DmmConfigureVoltageDc-3",
+      "keithley.2602b|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageDc"
+  },
+  {
+    "cases": [
       "keithley.2602b|B|DmmFetch-0",
-      "keithley.2602b|B|DmmRead-0",
-      "keithley.2602b|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keithley.2602b|B|temperature-DmmFetch",
       "keithley.2602b|B|DmmFetch-0-transport-failure",
-      "keithley.2602b|B|DmmRead-0-transport-failure"
+      "keithley.2602b|B|cross-class-temperature-state"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2602b",
     "negativeCases": [
-      "keithley.2602b|B|DmmMeasureVoltageDc-0-transport-failure",
-      "keithley.2602b|B|DmmFetch-0-transport-failure",
-      "keithley.2602b|B|DmmRead-0-transport-failure"
+      "keithley.2602b|B|DmmFetch-0-transport-failure"
     ],
-    "operation": "DmmMeasureVoltageDc"
+    "operation": "DmmFetch"
   },
   {
     "cases": [
-      "keithley.2602b|B|DmmMeasureVoltageAc-0",
-      "keithley.2602b|B|DmmMeasureVoltageAc-1",
-      "keithley.2602b|B|DmmMeasureVoltageAc-0-transport-failure"
+      "keithley.2602b|B|DmmInitiate-0",
+      "keithley.2602b|B|DmmInitiate-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2602b",
     "negativeCases": [
-      "keithley.2602b|B|DmmMeasureVoltageAc-0-transport-failure"
+      "keithley.2602b|B|DmmInitiate-0-transport-failure"
     ],
-    "operation": "DmmMeasureVoltageAc"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DmmMeasureCurrentDc-0",
-      "keithley.2602b|B|DmmMeasureCurrentDc-1",
-      "keithley.2602b|B|DmmMeasureCurrentDc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DmmMeasureCurrentDc-0-transport-failure"
-    ],
-    "operation": "DmmMeasureCurrentDc"
+    "operation": "DmmInitiate"
   },
   {
     "cases": [
@@ -341,6 +548,19 @@
       "keithley.2602b|B|DmmMeasureCurrentAc-0-transport-failure"
     ],
     "operation": "DmmMeasureCurrentAc"
+  },
+  {
+    "cases": [
+      "keithley.2602b|B|DmmMeasureCurrentDc-0",
+      "keithley.2602b|B|DmmMeasureCurrentDc-1",
+      "keithley.2602b|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.2602b",
+    "negativeCases": [
+      "keithley.2602b|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentDc"
   },
   {
     "cases": [
@@ -399,119 +619,33 @@
   },
   {
     "cases": [
-      "keithley.2602b|B|DmmConfigureVoltageDc-0",
-      "keithley.2602b|B|DmmConfigureVoltageDc-1",
-      "keithley.2602b|B|DmmConfigureVoltageDc-2",
-      "keithley.2602b|B|DmmConfigureVoltageDc-3",
-      "keithley.2602b|B|DmmConfigureVoltageDc-0-transport-failure"
+      "keithley.2602b|B|DmmMeasureVoltageAc-0",
+      "keithley.2602b|B|DmmMeasureVoltageAc-1",
+      "keithley.2602b|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2602b",
     "negativeCases": [
-      "keithley.2602b|B|DmmConfigureVoltageDc-0-transport-failure"
+      "keithley.2602b|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
-    "operation": "DmmConfigureVoltageDc"
+    "operation": "DmmMeasureVoltageAc"
   },
   {
     "cases": [
-      "keithley.2602b|B|DmmConfigureVoltageAc-0",
-      "keithley.2602b|B|DmmConfigureVoltageAc-1",
-      "keithley.2602b|B|DmmConfigureVoltageAc-2",
-      "keithley.2602b|B|DmmConfigureVoltageAc-3",
-      "keithley.2602b|B|DmmConfigureVoltageAc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DmmConfigureVoltageAc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureVoltageAc"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DmmConfigureCurrentDc-0",
-      "keithley.2602b|B|DmmConfigureCurrentDc-1",
-      "keithley.2602b|B|DmmConfigureCurrentDc-2",
-      "keithley.2602b|B|DmmConfigureCurrentDc-3",
-      "keithley.2602b|B|DmmConfigureCurrentDc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DmmConfigureCurrentDc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureCurrentDc"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DmmConfigureCurrentAc-0",
-      "keithley.2602b|B|DmmConfigureCurrentAc-1",
-      "keithley.2602b|B|DmmConfigureCurrentAc-2",
-      "keithley.2602b|B|DmmConfigureCurrentAc-3",
-      "keithley.2602b|B|DmmConfigureCurrentAc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DmmConfigureCurrentAc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureCurrentAc"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DmmConfigureResistance-0",
-      "keithley.2602b|B|DmmConfigureResistance-1",
-      "keithley.2602b|B|DmmConfigureResistance-2",
-      "keithley.2602b|B|DmmConfigureResistance-3",
-      "keithley.2602b|B|DmmConfigureResistance-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DmmConfigureResistance-0-transport-failure"
-    ],
-    "operation": "DmmConfigureResistance"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DmmConfigureResistance4Wire-0",
-      "keithley.2602b|B|DmmConfigureResistance4Wire-1",
-      "keithley.2602b|B|DmmConfigureResistance4Wire-2",
-      "keithley.2602b|B|DmmConfigureResistance4Wire-3",
-      "keithley.2602b|B|DmmConfigureResistance4Wire-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DmmConfigureResistance4Wire-0-transport-failure"
-    ],
-    "operation": "DmmConfigureResistance4Wire"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DmmInitiate-0",
-      "keithley.2602b|B|DmmInitiate-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DmmInitiate-0-transport-failure"
-    ],
-    "operation": "DmmInitiate"
-  },
-  {
-    "cases": [
+      "keithley.2602b|B|DmmMeasureVoltageDc-0",
+      "keithley.2602b|B|DmmMeasureVoltageDc-1",
       "keithley.2602b|B|DmmFetch-0",
-      "keithley.2602b|B|temperature-DmmFetch",
+      "keithley.2602b|B|DmmRead-0",
+      "keithley.2602b|B|DmmMeasureVoltageDc-0-transport-failure",
       "keithley.2602b|B|DmmFetch-0-transport-failure",
-      "keithley.2602b|B|cross-class-temperature-state"
+      "keithley.2602b|B|DmmRead-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.2602b",
     "negativeCases": [
-      "keithley.2602b|B|DmmFetch-0-transport-failure"
+      "keithley.2602b|B|DmmMeasureVoltageDc-0-transport-failure"
     ],
-    "operation": "DmmFetch"
+    "operation": "DmmMeasureVoltageDc"
   },
   {
     "cases": [
@@ -540,132 +674,6 @@
   },
   {
     "cases": [
-      "keithley.2602b|B|DcPowerSupplySetVoltage-0",
-      "keithley.2602b|B|invalid-DcPowerSupplySetVoltage",
-      "keithley.2602b|B|DcPowerSupplySetVoltage-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|invalid-DcPowerSupplySetVoltage",
-      "keithley.2602b|B|DcPowerSupplySetVoltage-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplySetVoltage"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0",
-      "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplySetCurrentLimit"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplyOutputEnable-0",
-      "keithley.2602b|B|DcPowerSupplyOutputEnable-1",
-      "keithley.2602b|B|DcPowerSupplyOutputEnable-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplyOutputEnable-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyOutputEnable"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0",
-      "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplyOutputStateQuery-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyOutputStateQuery"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplyOvpLevel-0",
-      "keithley.2602b|B|DcPowerSupplyOvpLevel-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplyOvpLevel-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyOvpLevel"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplyOvpEnable-0",
-      "keithley.2602b|B|DcPowerSupplyOvpEnable-1",
-      "keithley.2602b|B|DcPowerSupplyOvpEnable-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplyOvpEnable-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyOvpEnable"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplyOvpQuery-0",
-      "keithley.2602b|B|DcPowerSupplyOvpQuery-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplyOvpQuery-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyOvpQuery"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplyReadVoltage-0",
-      "keithley.2602b|B|DcPowerSupplyReadVoltage-0-transport-failure",
-      "keithley.2602b|B|cross-class-temperature-state"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplyReadVoltage-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyReadVoltage"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplyReadCurrent-0",
-      "keithley.2602b|B|DcPowerSupplyReadCurrent-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplyReadCurrent-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyReadCurrent"
-  },
-  {
-    "cases": [
-      "keithley.2602b|B|DcPowerSupplySetSenseMode-0",
-      "keithley.2602b|B|DcPowerSupplySetSenseMode-1",
-      "keithley.2602b|B|DcPowerSupplySetSenseMode-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.2602b",
-    "negativeCases": [
-      "keithley.2602b|B|DcPowerSupplySetSenseMode-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplySetSenseMode"
-  },
-  {
-    "cases": [
       "keithley.2602b|B|QueryIdentity-0",
       "keithley.2602b|B|QueryIdentity-0-transport-failure"
     ],
@@ -690,51 +698,17 @@
   },
   {
     "cases": [
-      "keithley.3706a|B|SwitchCloseRoute-0",
-      "keithley.3706a|B|SwitchCloseRoute-0-transport-failure"
+      "keithley.2602b|B|Shutdown-0",
+      "keithley.2602b|U|unknown-Shutdown",
+      "keithley.2602b|B|Shutdown-0-transport-failure"
     ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.3706a",
+    "disposition": "explicit-inventory-binding-required",
+    "driver": "keithley.2602b",
     "negativeCases": [
-      "keithley.3706a|B|SwitchCloseRoute-0-transport-failure"
+      "keithley.2602b|U|unknown-Shutdown",
+      "keithley.2602b|B|Shutdown-0-transport-failure"
     ],
-    "operation": "SwitchCloseRoute"
-  },
-  {
-    "cases": [
-      "keithley.3706a|B|SwitchOpenRoute-0",
-      "keithley.3706a|B|SwitchOpenRoute-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.3706a",
-    "negativeCases": [
-      "keithley.3706a|B|SwitchOpenRoute-0-transport-failure"
-    ],
-    "operation": "SwitchOpenRoute"
-  },
-  {
-    "cases": [
-      "keithley.3706a|B|SwitchIsClosed-0",
-      "keithley.3706a|B|SwitchIsClosed-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.3706a",
-    "negativeCases": [
-      "keithley.3706a|B|SwitchIsClosed-0-transport-failure"
-    ],
-    "operation": "SwitchIsClosed"
-  },
-  {
-    "cases": [
-      "keithley.3706a|B|SwitchOpenAll-0",
-      "keithley.3706a|B|SwitchOpenAll-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.3706a",
-    "negativeCases": [
-      "keithley.3706a|B|SwitchOpenAll-0-transport-failure"
-    ],
-    "operation": "SwitchOpenAll"
+    "operation": "Shutdown"
   },
   {
     "cases": [
@@ -774,51 +748,51 @@
   },
   {
     "cases": [
-      "keithley.707b|B|SwitchCloseRoute-0",
-      "keithley.707b|B|SwitchCloseRoute-0-transport-failure"
+      "keithley.3706a|B|SwitchCloseRoute-0",
+      "keithley.3706a|B|SwitchCloseRoute-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.707b",
+    "driver": "keithley.3706a",
     "negativeCases": [
-      "keithley.707b|B|SwitchCloseRoute-0-transport-failure"
+      "keithley.3706a|B|SwitchCloseRoute-0-transport-failure"
     ],
     "operation": "SwitchCloseRoute"
   },
   {
     "cases": [
-      "keithley.707b|B|SwitchOpenRoute-0",
-      "keithley.707b|B|SwitchOpenRoute-0-transport-failure"
+      "keithley.3706a|B|SwitchIsClosed-0",
+      "keithley.3706a|B|SwitchIsClosed-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.707b",
+    "driver": "keithley.3706a",
     "negativeCases": [
-      "keithley.707b|B|SwitchOpenRoute-0-transport-failure"
-    ],
-    "operation": "SwitchOpenRoute"
-  },
-  {
-    "cases": [
-      "keithley.707b|B|SwitchIsClosed-0",
-      "keithley.707b|B|SwitchIsClosed-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.707b",
-    "negativeCases": [
-      "keithley.707b|B|SwitchIsClosed-0-transport-failure"
+      "keithley.3706a|B|SwitchIsClosed-0-transport-failure"
     ],
     "operation": "SwitchIsClosed"
   },
   {
     "cases": [
-      "keithley.707b|B|SwitchOpenAll-0",
-      "keithley.707b|B|SwitchOpenAll-0-transport-failure"
+      "keithley.3706a|B|SwitchOpenAll-0",
+      "keithley.3706a|B|SwitchOpenAll-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.707b",
+    "driver": "keithley.3706a",
     "negativeCases": [
-      "keithley.707b|B|SwitchOpenAll-0-transport-failure"
+      "keithley.3706a|B|SwitchOpenAll-0-transport-failure"
     ],
     "operation": "SwitchOpenAll"
+  },
+  {
+    "cases": [
+      "keithley.3706a|B|SwitchOpenRoute-0",
+      "keithley.3706a|B|SwitchOpenRoute-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.3706a",
+    "negativeCases": [
+      "keithley.3706a|B|SwitchOpenRoute-0-transport-failure"
+    ],
+    "operation": "SwitchOpenRoute"
   },
   {
     "cases": [
@@ -858,48 +832,166 @@
   },
   {
     "cases": [
-      "keithley.dmm6500|B|DmmMeasureVoltageDc-0",
-      "keithley.dmm6500|B|DmmMeasureVoltageDc-1",
+      "keithley.707b|B|SwitchCloseRoute-0",
+      "keithley.707b|B|SwitchCloseRoute-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.707b",
+    "negativeCases": [
+      "keithley.707b|B|SwitchCloseRoute-0-transport-failure"
+    ],
+    "operation": "SwitchCloseRoute"
+  },
+  {
+    "cases": [
+      "keithley.707b|B|SwitchIsClosed-0",
+      "keithley.707b|B|SwitchIsClosed-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.707b",
+    "negativeCases": [
+      "keithley.707b|B|SwitchIsClosed-0-transport-failure"
+    ],
+    "operation": "SwitchIsClosed"
+  },
+  {
+    "cases": [
+      "keithley.707b|B|SwitchOpenAll-0",
+      "keithley.707b|B|SwitchOpenAll-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.707b",
+    "negativeCases": [
+      "keithley.707b|B|SwitchOpenAll-0-transport-failure"
+    ],
+    "operation": "SwitchOpenAll"
+  },
+  {
+    "cases": [
+      "keithley.707b|B|SwitchOpenRoute-0",
+      "keithley.707b|B|SwitchOpenRoute-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.707b",
+    "negativeCases": [
+      "keithley.707b|B|SwitchOpenRoute-0-transport-failure"
+    ],
+    "operation": "SwitchOpenRoute"
+  },
+  {
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-0",
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-1",
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-2",
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-3",
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.dmm6500",
+    "negativeCases": [
+      "keithley.dmm6500|B|DmmConfigureCurrentAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentAc"
+  },
+  {
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-0",
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-1",
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-2",
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-3",
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.dmm6500",
+    "negativeCases": [
+      "keithley.dmm6500|B|DmmConfigureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureCurrentDc"
+  },
+  {
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureResistance-0",
+      "keithley.dmm6500|B|DmmConfigureResistance-1",
+      "keithley.dmm6500|B|DmmConfigureResistance-2",
+      "keithley.dmm6500|B|DmmConfigureResistance-3",
+      "keithley.dmm6500|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.dmm6500",
+    "negativeCases": [
+      "keithley.dmm6500|B|DmmConfigureResistance-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance"
+  },
+  {
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-0",
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-1",
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-2",
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-3",
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.dmm6500",
+    "negativeCases": [
+      "keithley.dmm6500|B|DmmConfigureResistance4Wire-0-transport-failure"
+    ],
+    "operation": "DmmConfigureResistance4Wire"
+  },
+  {
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-0",
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-1",
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-2",
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-3",
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.dmm6500",
+    "negativeCases": [
+      "keithley.dmm6500|B|DmmConfigureVoltageAc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageAc"
+  },
+  {
+    "cases": [
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-0",
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-1",
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-2",
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-3",
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.dmm6500",
+    "negativeCases": [
+      "keithley.dmm6500|B|DmmConfigureVoltageDc-0-transport-failure"
+    ],
+    "operation": "DmmConfigureVoltageDc"
+  },
+  {
+    "cases": [
       "keithley.dmm6500|B|DmmFetch-0",
-      "keithley.dmm6500|B|DmmRead-0",
-      "keithley.dmm6500|B|DmmMeasureVoltageDc-0-transport-failure",
-      "keithley.dmm6500|B|DmmFetch-0-transport-failure",
-      "keithley.dmm6500|B|DmmRead-0-transport-failure"
+      "keithley.dmm6500|B|temperature-DmmFetch",
+      "keithley.dmm6500|B|DmmFetch-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.dmm6500",
     "negativeCases": [
-      "keithley.dmm6500|B|DmmMeasureVoltageDc-0-transport-failure",
-      "keithley.dmm6500|B|DmmFetch-0-transport-failure",
-      "keithley.dmm6500|B|DmmRead-0-transport-failure"
+      "keithley.dmm6500|B|DmmFetch-0-transport-failure"
     ],
-    "operation": "DmmMeasureVoltageDc"
+    "operation": "DmmFetch"
   },
   {
     "cases": [
-      "keithley.dmm6500|B|DmmMeasureVoltageAc-0",
-      "keithley.dmm6500|B|DmmMeasureVoltageAc-1",
-      "keithley.dmm6500|B|DmmMeasureVoltageAc-0-transport-failure"
+      "keithley.dmm6500|B|DmmInitiate-0",
+      "keithley.dmm6500|B|DmmInitiate-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.dmm6500",
     "negativeCases": [
-      "keithley.dmm6500|B|DmmMeasureVoltageAc-0-transport-failure"
+      "keithley.dmm6500|B|DmmInitiate-0-transport-failure"
     ],
-    "operation": "DmmMeasureVoltageAc"
-  },
-  {
-    "cases": [
-      "keithley.dmm6500|B|DmmMeasureCurrentDc-0",
-      "keithley.dmm6500|B|DmmMeasureCurrentDc-1",
-      "keithley.dmm6500|B|DmmMeasureCurrentDc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.dmm6500",
-    "negativeCases": [
-      "keithley.dmm6500|B|DmmMeasureCurrentDc-0-transport-failure"
-    ],
-    "operation": "DmmMeasureCurrentDc"
+    "operation": "DmmInitiate"
   },
   {
     "cases": [
@@ -913,6 +1005,19 @@
       "keithley.dmm6500|B|DmmMeasureCurrentAc-0-transport-failure"
     ],
     "operation": "DmmMeasureCurrentAc"
+  },
+  {
+    "cases": [
+      "keithley.dmm6500|B|DmmMeasureCurrentDc-0",
+      "keithley.dmm6500|B|DmmMeasureCurrentDc-1",
+      "keithley.dmm6500|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.dmm6500",
+    "negativeCases": [
+      "keithley.dmm6500|B|DmmMeasureCurrentDc-0-transport-failure"
+    ],
+    "operation": "DmmMeasureCurrentDc"
   },
   {
     "cases": [
@@ -970,118 +1075,33 @@
   },
   {
     "cases": [
-      "keithley.dmm6500|B|DmmConfigureVoltageDc-0",
-      "keithley.dmm6500|B|DmmConfigureVoltageDc-1",
-      "keithley.dmm6500|B|DmmConfigureVoltageDc-2",
-      "keithley.dmm6500|B|DmmConfigureVoltageDc-3",
-      "keithley.dmm6500|B|DmmConfigureVoltageDc-0-transport-failure"
+      "keithley.dmm6500|B|DmmMeasureVoltageAc-0",
+      "keithley.dmm6500|B|DmmMeasureVoltageAc-1",
+      "keithley.dmm6500|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.dmm6500",
     "negativeCases": [
-      "keithley.dmm6500|B|DmmConfigureVoltageDc-0-transport-failure"
+      "keithley.dmm6500|B|DmmMeasureVoltageAc-0-transport-failure"
     ],
-    "operation": "DmmConfigureVoltageDc"
+    "operation": "DmmMeasureVoltageAc"
   },
   {
     "cases": [
-      "keithley.dmm6500|B|DmmConfigureVoltageAc-0",
-      "keithley.dmm6500|B|DmmConfigureVoltageAc-1",
-      "keithley.dmm6500|B|DmmConfigureVoltageAc-2",
-      "keithley.dmm6500|B|DmmConfigureVoltageAc-3",
-      "keithley.dmm6500|B|DmmConfigureVoltageAc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.dmm6500",
-    "negativeCases": [
-      "keithley.dmm6500|B|DmmConfigureVoltageAc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureVoltageAc"
-  },
-  {
-    "cases": [
-      "keithley.dmm6500|B|DmmConfigureCurrentDc-0",
-      "keithley.dmm6500|B|DmmConfigureCurrentDc-1",
-      "keithley.dmm6500|B|DmmConfigureCurrentDc-2",
-      "keithley.dmm6500|B|DmmConfigureCurrentDc-3",
-      "keithley.dmm6500|B|DmmConfigureCurrentDc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.dmm6500",
-    "negativeCases": [
-      "keithley.dmm6500|B|DmmConfigureCurrentDc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureCurrentDc"
-  },
-  {
-    "cases": [
-      "keithley.dmm6500|B|DmmConfigureCurrentAc-0",
-      "keithley.dmm6500|B|DmmConfigureCurrentAc-1",
-      "keithley.dmm6500|B|DmmConfigureCurrentAc-2",
-      "keithley.dmm6500|B|DmmConfigureCurrentAc-3",
-      "keithley.dmm6500|B|DmmConfigureCurrentAc-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.dmm6500",
-    "negativeCases": [
-      "keithley.dmm6500|B|DmmConfigureCurrentAc-0-transport-failure"
-    ],
-    "operation": "DmmConfigureCurrentAc"
-  },
-  {
-    "cases": [
-      "keithley.dmm6500|B|DmmConfigureResistance-0",
-      "keithley.dmm6500|B|DmmConfigureResistance-1",
-      "keithley.dmm6500|B|DmmConfigureResistance-2",
-      "keithley.dmm6500|B|DmmConfigureResistance-3",
-      "keithley.dmm6500|B|DmmConfigureResistance-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.dmm6500",
-    "negativeCases": [
-      "keithley.dmm6500|B|DmmConfigureResistance-0-transport-failure"
-    ],
-    "operation": "DmmConfigureResistance"
-  },
-  {
-    "cases": [
-      "keithley.dmm6500|B|DmmConfigureResistance4Wire-0",
-      "keithley.dmm6500|B|DmmConfigureResistance4Wire-1",
-      "keithley.dmm6500|B|DmmConfigureResistance4Wire-2",
-      "keithley.dmm6500|B|DmmConfigureResistance4Wire-3",
-      "keithley.dmm6500|B|DmmConfigureResistance4Wire-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.dmm6500",
-    "negativeCases": [
-      "keithley.dmm6500|B|DmmConfigureResistance4Wire-0-transport-failure"
-    ],
-    "operation": "DmmConfigureResistance4Wire"
-  },
-  {
-    "cases": [
-      "keithley.dmm6500|B|DmmInitiate-0",
-      "keithley.dmm6500|B|DmmInitiate-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.dmm6500",
-    "negativeCases": [
-      "keithley.dmm6500|B|DmmInitiate-0-transport-failure"
-    ],
-    "operation": "DmmInitiate"
-  },
-  {
-    "cases": [
+      "keithley.dmm6500|B|DmmMeasureVoltageDc-0",
+      "keithley.dmm6500|B|DmmMeasureVoltageDc-1",
       "keithley.dmm6500|B|DmmFetch-0",
-      "keithley.dmm6500|B|temperature-DmmFetch",
-      "keithley.dmm6500|B|DmmFetch-0-transport-failure"
+      "keithley.dmm6500|B|DmmRead-0",
+      "keithley.dmm6500|B|DmmMeasureVoltageDc-0-transport-failure",
+      "keithley.dmm6500|B|DmmFetch-0-transport-failure",
+      "keithley.dmm6500|B|DmmRead-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.dmm6500",
     "negativeCases": [
-      "keithley.dmm6500|B|DmmFetch-0-transport-failure"
+      "keithley.dmm6500|B|DmmMeasureVoltageDc-0-transport-failure"
     ],
-    "operation": "DmmFetch"
+    "operation": "DmmMeasureVoltageDc"
   },
   {
     "cases": [
@@ -1143,29 +1163,15 @@
   },
   {
     "cases": [
-      "keithley.e36312a|B|DcPowerSupplySetVoltage-0",
-      "keithley.e36312a|B|invalid-DcPowerSupplySetVoltage",
-      "keithley.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure"
+      "keithley.e36312a|B|DcPowerSupplyChannelCount-0",
+      "keithley.e36312a|U|unknown-DcPowerSupplyChannelCount"
     ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "disposition": "explicit-inventory-binding-required",
     "driver": "keithley.e36312a",
     "negativeCases": [
-      "keithley.e36312a|B|invalid-DcPowerSupplySetVoltage",
-      "keithley.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure"
+      "keithley.e36312a|U|unknown-DcPowerSupplyChannelCount"
     ],
-    "operation": "DcPowerSupplySetVoltage"
-  },
-  {
-    "cases": [
-      "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0",
-      "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.e36312a",
-    "negativeCases": [
-      "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplySetCurrentLimit"
+    "operation": "DcPowerSupplyChannelCount"
   },
   {
     "cases": [
@@ -1194,18 +1200,6 @@
   },
   {
     "cases": [
-      "keithley.e36312a|B|DcPowerSupplyOvpLevel-0",
-      "keithley.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "keithley.e36312a",
-    "negativeCases": [
-      "keithley.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyOvpLevel"
-  },
-  {
-    "cases": [
       "keithley.e36312a|B|DcPowerSupplyOvpEnable-0",
       "keithley.e36312a|B|DcPowerSupplyOvpEnable-1",
       "keithley.e36312a|B|DcPowerSupplyOvpEnable-0-transport-failure"
@@ -1216,6 +1210,18 @@
       "keithley.e36312a|B|DcPowerSupplyOvpEnable-0-transport-failure"
     ],
     "operation": "DcPowerSupplyOvpEnable"
+  },
+  {
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplyOvpLevel-0",
+      "keithley.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.e36312a",
+    "negativeCases": [
+      "keithley.e36312a|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpLevel"
   },
   {
     "cases": [
@@ -1231,6 +1237,18 @@
   },
   {
     "cases": [
+      "keithley.e36312a|B|DcPowerSupplyReadCurrent-0",
+      "keithley.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.e36312a",
+    "negativeCases": [
+      "keithley.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadCurrent"
+  },
+  {
+    "cases": [
       "keithley.e36312a|B|DcPowerSupplyReadVoltage-0",
       "keithley.e36312a|B|DcPowerSupplyReadVoltage-0-transport-failure"
     ],
@@ -1243,15 +1261,15 @@
   },
   {
     "cases": [
-      "keithley.e36312a|B|DcPowerSupplyReadCurrent-0",
-      "keithley.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure"
+      "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0",
+      "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "keithley.e36312a",
     "negativeCases": [
-      "keithley.e36312a|B|DcPowerSupplyReadCurrent-0-transport-failure"
+      "keithley.e36312a|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
-    "operation": "DcPowerSupplyReadCurrent"
+    "operation": "DcPowerSupplySetCurrentLimit"
   },
   {
     "cases": [
@@ -1265,6 +1283,20 @@
       "keithley.e36312a|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
     "operation": "DcPowerSupplySetSenseMode"
+  },
+  {
+    "cases": [
+      "keithley.e36312a|B|DcPowerSupplySetVoltage-0",
+      "keithley.e36312a|B|invalid-DcPowerSupplySetVoltage",
+      "keithley.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "keithley.e36312a",
+    "negativeCases": [
+      "keithley.e36312a|B|invalid-DcPowerSupplySetVoltage",
+      "keithley.e36312a|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetVoltage"
   },
   {
     "cases": [
@@ -1289,5 +1321,19 @@
       "keithley.e36312a|B|Reset-0-transport-failure"
     ],
     "operation": "Reset"
+  },
+  {
+    "cases": [
+      "keithley.e36312a|B|Shutdown-0",
+      "keithley.e36312a|U|unknown-Shutdown",
+      "keithley.e36312a|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "explicit-inventory-binding-required",
+    "driver": "keithley.e36312a",
+    "negativeCases": [
+      "keithley.e36312a|U|unknown-Shutdown",
+      "keithley.e36312a|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
   }
 ]
