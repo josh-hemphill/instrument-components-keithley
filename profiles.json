@@ -1,0 +1,2304 @@
+{
+  "schemaVersion": 1,
+  "contractMajor": 1,
+  "profiles": [
+    {
+      "id": "keithley.2000",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keithley Instruments",
+          "model": "2000"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureTemperature",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmSoftwareTrigger",
+          "steps": [
+            {
+              "command": "*TRG",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keithley.2602b",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Keithley Instruments",
+          "model": "2602B"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureTemperature",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmSoftwareTrigger",
+          "steps": [
+            {
+              "command": "*TRG",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:CURR {amps}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP{channel} {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "steps": [
+            {
+              "command": ":OUTP{channel}?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "steps": [
+            {
+              "command": ":MEAS:VOLT? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "steps": [
+            {
+              "command": ":MEAS:CURR? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetSenseMode",
+          "steps": [
+            {
+              "command": ":OUTP{channel}:SENS {mode}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "mode": {
+              "Internal": "OFF",
+              "External": "ON"
+            }
+          }
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keithley.3706a",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keithley Instruments",
+          "model": "3706A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SwitchCloseRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchIsClosed",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS? (@({ch1},{ch2}))",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenAll",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keithley.707b",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keithley Instruments",
+          "model": "707B"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "SwitchCloseRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenRoute",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN (@({ch1},{ch2}))",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchIsClosed",
+          "steps": [
+            {
+              "command": ":ROUTe:CLOS? (@({ch1},{ch2}))",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "SwitchOpenAll",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": [
+            {
+              "command": ":ROUTe:OPEN:ALL",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keithley.dmm6500",
+      "channels": [
+        1
+      ],
+      "outputs": [],
+      "rules": [
+        {
+          "manufacturer": "Keithley Instruments",
+          "model": "DMM6500"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DmmMeasureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"VOLT:DC\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"VOLT:AC\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:VOLT:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"CURR:DC\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:DC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"CURR:AC\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:CURR:AC? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"RES\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance2Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"RES\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:RES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"FRES\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:FRES? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmMeasureTemperature",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false
+              },
+              "steps": [
+                {
+                  "command": ":SENS:FUNC \"TEMP\";:READ?",
+                  "response": "Value"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true
+              },
+              "steps": [
+                {
+                  "command": ":MEAS:TEMP? {range}",
+                  "response": "Value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureVoltageAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:VOLT:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentDc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:DC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureCurrentAc",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:CURR:AC {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:RES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmConfigureResistance4Wire",
+          "steps": [],
+          "choices": [
+            {
+              "presence": {
+                "range": false,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": false
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": false,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES DEF,{resolution}",
+                  "response": "Write"
+                }
+              ]
+            },
+            {
+              "presence": {
+                "range": true,
+                "resolution": true
+              },
+              "steps": [
+                {
+                  "command": ":CONF:FRES {range},{resolution}",
+                  "response": "Write"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "operation": "DmmInitiate",
+          "steps": [
+            {
+              "command": "INIT",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmFetch",
+          "steps": [
+            {
+              "command": "FETC?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmRead",
+          "steps": [
+            {
+              "command": "READ?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DmmSoftwareTrigger",
+          "steps": [
+            {
+              "command": "*TRG",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        },
+        {
+          "operation": "Shutdown",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": "keithley.e36312a",
+      "channels": [
+        1
+      ],
+      "outputs": null,
+      "rules": [
+        {
+          "manufacturer": "Keithley Instruments",
+          "model": "E36312A"
+        }
+      ],
+      "plans": [
+        {
+          "operation": "DcPowerSupplySetVoltage",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetCurrentLimit",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:CURR {amps}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOutputEnable",
+          "steps": [
+            {
+              "command": ":OUTP{channel} {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOutputStateQuery",
+          "steps": [
+            {
+              "command": ":OUTP{channel}?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpLevel",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT {volts}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyOvpEnable",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT {enabled}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "enabled": {
+              "true": "ON",
+              "false": "OFF"
+            }
+          }
+        },
+        {
+          "operation": "DcPowerSupplyOvpQuery",
+          "steps": [
+            {
+              "command": ":SOUR{channel}:VOLT:PROT:STAT?",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadVoltage",
+          "steps": [
+            {
+              "command": ":MEAS:VOLT? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplyReadCurrent",
+          "steps": [
+            {
+              "command": ":MEAS:CURR? {channel}",
+              "response": "Value"
+            }
+          ],
+          "tokens": {}
+        },
+        {
+          "operation": "DcPowerSupplySetSenseMode",
+          "steps": [
+            {
+              "command": ":OUTP{channel}:SENS {mode}",
+              "response": "Write"
+            }
+          ],
+          "tokens": {
+            "mode": {
+              "Internal": "OFF",
+              "External": "ON"
+            }
+          }
+        },
+        {
+          "operation": "QueryIdentity",
+          "steps": [
+            {
+              "command": "*IDN?",
+              "response": "Value"
+            }
+          ]
+        },
+        {
+          "operation": "Reset",
+          "steps": [
+            {
+              "command": "*RST",
+              "response": "Write"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

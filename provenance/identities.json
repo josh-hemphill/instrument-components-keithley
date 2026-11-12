@@ -1,0 +1,278 @@
+[
+  {
+    "driver": "keithley.2000",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm"
+        ],
+        "legacyResolution": {
+          "Dmm": {
+            "commandKeys": [
+              "configure_voltage_dc",
+              "fetch",
+              "initiate",
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc",
+              "read",
+              "software_trigger"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dmm"
+          }
+        },
+        "manufacturer": "Keithley Instruments",
+        "migration": "required",
+        "model": "2000",
+        "repository": "instrument-components-keithley"
+      }
+    ],
+    "kinds": [
+      "Dmm"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keithley.2602b",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm",
+          "DcPowerSupply"
+        ],
+        "legacyResolution": {
+          "DcPowerSupply": {
+            "commandKeys": [
+              "output_enable",
+              "output_state_query",
+              "ovp_enable",
+              "ovp_level",
+              "ovp_query",
+              "read_current",
+              "read_voltage",
+              "sense_enable",
+              "set_current_limit",
+              "set_voltage"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dcpwr"
+          },
+          "Dmm": {
+            "commandKeys": [
+              "configure_voltage_dc",
+              "fetch",
+              "initiate",
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc",
+              "read",
+              "software_trigger"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dmm"
+          }
+        },
+        "manufacturer": "Keithley Instruments",
+        "migration": "required",
+        "model": "2602B",
+        "repository": "instrument-components-keithley"
+      }
+    ],
+    "kinds": [
+      "Dmm",
+      "DcPowerSupply"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keithley.3706a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Switch"
+        ],
+        "legacyResolution": {
+          "Switch": {
+            "commandKeys": [
+              "close_route",
+              "is_closed",
+              "open_all",
+              "open_route"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_switch"
+          }
+        },
+        "manufacturer": "Keithley Instruments",
+        "migration": "required",
+        "model": "3706A",
+        "repository": "instrument-components-keithley"
+      }
+    ],
+    "kinds": [
+      "Switch"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":ROUTe:OPEN:ALL",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keithley.707b",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Switch"
+        ],
+        "legacyResolution": {
+          "Switch": {
+            "commandKeys": [
+              "close_route",
+              "is_closed",
+              "open_all",
+              "open_route"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_switch"
+          }
+        },
+        "manufacturer": "Keithley Instruments",
+        "migration": "required",
+        "model": "707B",
+        "repository": "instrument-components-keithley"
+      }
+    ],
+    "kinds": [
+      "Switch"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": [
+      {
+        "command": ":ROUTe:OPEN:ALL",
+        "response": "Write"
+      }
+    ]
+  },
+  {
+    "driver": "keithley.dmm6500",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "Dmm"
+        ],
+        "legacyResolution": {
+          "Dmm": {
+            "commandKeys": [
+              "measure_current_ac",
+              "measure_current_dc",
+              "measure_resistance_2w",
+              "measure_resistance_4w",
+              "measure_temperature",
+              "measure_voltage_ac",
+              "measure_voltage_dc"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "keithley_dmm6500"
+          }
+        },
+        "manufacturer": "Keithley Instruments",
+        "migration": "required",
+        "model": "DMM6500",
+        "repository": "instrument-components-keithley"
+      }
+    ],
+    "kinds": [
+      "Dmm"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "modeled outputless class",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  },
+  {
+    "driver": "keithley.e36312a",
+    "hints": [
+      {
+        "evidence": "identity-hint-only",
+        "hardwareValidated": false,
+        "kinds": [
+          "DcPowerSupply"
+        ],
+        "legacyResolution": {
+          "DcPowerSupply": {
+            "commandKeys": [
+              "output_enable",
+              "output_state_query",
+              "ovp_enable",
+              "ovp_level",
+              "ovp_query",
+              "read_current",
+              "read_voltage",
+              "sense_enable",
+              "set_current_limit",
+              "set_voltage"
+            ],
+            "hardwareValidated": false,
+            "implicitFallbackMustBecomeExplicit": true,
+            "profile": "generic_dcpwr"
+          }
+        },
+        "manufacturer": "Keithley Instruments",
+        "migration": "required",
+        "model": "E36312A",
+        "repository": "instrument-components-keithley"
+      }
+    ],
+    "kinds": [
+      "DcPowerSupply"
+    ],
+    "defaultChannels": "legacy supported-ID hints, not physical completeness",
+    "defaultOutputs": "unknown",
+    "temperatureUnit": "Unknown",
+    "hardwareValidated": false,
+    "shutdownSteps": []
+  }
+]

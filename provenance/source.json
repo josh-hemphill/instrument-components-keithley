@@ -1,0 +1,38 @@
+{
+  "mainCommit": "5eb92b17f775d326e5a3542ee40855b156321745",
+  "files": [
+    {
+      "path": "crates/instrument-core/data/model_registry.toml",
+      "sha256": "46603d30261596bc96faa205fd1b65338432054cb9aeb7a8aec812d818f1004d"
+    },
+    {
+      "path": "crates/instrument-core/data/dialects/profiles.toml",
+      "sha256": "44814efe718c25f44552fad7fd822d9aaeb55eb87d482080f73a303dd58306d3"
+    },
+    {
+      "path": "crates/instrument-core/data/scpi_commands.toml",
+      "sha256": "48d43999d03f71a4462cb7fed86cdc21ecace2d546b8d94d82142ba39a9cab30"
+    },
+    {
+      "path": "spec/generic-scpi-map.json",
+      "sha256": "00a8db7ddbfe9063e4dc906a1f0f4a6f635346d8399073688a2c15e1960e8af5"
+    },
+    {
+      "path": "spec/vendors/keithley-dmm6500.json",
+      "sha256": "269ccf07190c4003af15cff5443caf70ffc900280c8852e535c2afbc943ecfb0"
+    },
+    {
+      "path": "crates/instrument/src/classes/dc_psu.rs",
+      "sha256": "3c07ea59a0cb3d6e4f401b3dc3c4ddd89527d972f78cff8edb710233a58b7e04"
+    },
+    {
+      "path": "crates/instrument/src/classes/dmm.rs",
+      "sha256": "88639e2c36b0bb23dcf9960c464109bc20b172a95fd6d49c208dc413001e1eb0"
+    },
+    {
+      "path": "crates/instrument/src/classes/switch.rs",
+      "sha256": "415e4542e2315812292e1ddfd3f5e1af39ce4f78bc8801d45052c0cc5a95825a"
+    }
+  ],
+  "hardwareValidated": false
+}
